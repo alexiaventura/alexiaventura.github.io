@@ -1,0 +1,184 @@
+/* Based on the accessibility checker at https://achecks.org/checker/index.php, I had to change the font 
+colors I picked manually through https://webaim.org/resources/contrastchecker/ to pass the validation checks.
+Therefore, some of the color values are in rgb, some are the actual name of the color, some are the hex number.
+
+I have some experience in HTML/CSS already, so I feel like some of these things are pretty basic and don't really
+need to be cited. I did check back on some syntax though and found the documentation to cite it.
+Flexbox: https://www.w3schools.com/csS/css3_flexbox_container.asp
+Margin: https://www.w3schools.com/Css/css_margin.asp
+Padding: https://www.w3schools.com/csS/css_padding.asp
+
+For the table, I followed along directly with the CSS lecture recording to just use the same code, since it
+was my first time making it.*/
+
+body {
+    background-color: black;
+}
+
+td,
+th {
+    border-width: 1px;
+    border-style: solid;
+    color: rgb(141, 112, 221);
+}
+
+th {
+    font-size: 150%;
+    padding: 5px;
+}
+
+.header-container {
+    padding-bottom: 400px;
+    text-align: center;
+    display: flex;
+}
+
+.header-container2 {
+    padding-top: 400px;
+    text-align: center;
+    display: flex;
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.table-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Arial';
+    color: white;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Arial';
+    color: rgb(241, 239, 244);
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Arial';
+    color: #A785EA;
+    text-align: center;
+}
+
+h4 {
+    font-family: 'Arial';
+    color: rgb(241, 239, 244);
+    font-style: italic;
+    text-align: center;
+}
+
+p {
+    font-family: 'Arial';
+    color: rgb(141, 112, 221);
+    background-color: black;
+    text-align: center;
+}
+
+div {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    text-align: center;
+}
+
+/*I followed along with the CodePath WEB101 example for this, cited as a PDF in my README file,
+since I wanted to add this as a unique feature for my own portfolio. It's outside of what is
+taught in INF 133 and is just for me*/
+section {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+section img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#greeting {
+    font-size: 70px;
+    z-index: 3;
+}
+
+#introduction {
+    font-size: 20px;
+    z-index: 3;
+}
+
+#background {
+    z-index: 0;
+}
+
+#spideralexia {
+    z-index: 1;
+}
+
+#pencilstars {
+    z-index: 2;
+    object-fit: cover;
+}
+
+/*Syntax help for iframes: https://www.w3schools.com/tags/tag_iframe.asp*/
+iframe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 0px;
+}
+
+/*  For the following, I learned in the CodePath WEB101 class how to make
+a navigation bar that's well-aligned on the screen and changes upon hovering
+over the text, but I also looked for the documentation as follows
+Syntax help: https://www.w3schools.com/Css/css_navbar.asp
+https://www.w3schools.com/Css/css_navbar_horizontal.asp
+*/
+ul {
+    list-style-type: none;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    z-index: 4;
+}
+
+/* Style rule set for individual li */
+li {
+    float: left;
+    margin: 10px;
+}
+
+
+/* Style rule set for individual li link */
+li a {
+    font-family: Arial;
+    color: #8D8DF6;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+/* Style rule set for hovered link */
+li a:hover {
+    font-weight: bold;
+    color: #B69AF9;
+}

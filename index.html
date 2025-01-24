@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+
+<!--
+WRITTEN BY: Alexia Ventura
+EMAIL: alexiabv@uci.edu
+-->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Alexia Ventura">
+  <meta name="description" content="Alexia Ventura's UI/UX design portfolio">
+  <!-- Linking Bootstrap and an external stylesheet-->
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet" type="text/css">
+  <title>Alexia Ventura</title>
+
+  <!--Syntax help for a favicon: https://www.w3schools.com/html/html_favicon.asp and
+  done based on my CodePath WEB101 class's example-->
+  <link rel="icon" href="professionalheadshot.png">
+</head>
+
+<body>
+
+  <!--Syntax help for a navigation bar: https://www.w3schools.com/Css/css_navbar.asp
+  and done based on my CodePath WEB101 class's example-->
+  <ul>
+    <li><a href="#aboutme">ABOUT ME</a></li>
+    <li><a href="#experience">EXPERIENCE</a></li>
+    <li><a href="#projects">PROJECTS</a></li>
+    <li><a href="#skills">SKILLS</a></li>
+  </ul>
+
+  <!--Syntax help for using sections: https://www.w3schools.com/TAgs/tag_section.asp
+  The parallax animation code was done based on my CodePath WEB101 class's example-->
+  <section>
+    <div class="header-container">
+      <h1 id="greeting">Hi, I am Alexia Ventura.</h1>
+    </div>
+    <img src="websitebackground.png" id="background" alt="purple gradient background">
+    <img src="spideralexia.png" id="spideralexia" alt="Alexia Ventura in a spider costume">
+    <img src="pencilstars.png" id="pencilstars" alt="stars drawn with a pencil">
+    <div class="header-container2">
+      <h2 id="introduction">I am a designer and researcher especially inspired by my passions for music and social media
+        inclusivity.</h2>
+    </div>
+  </section>
+  <script src="script.js"></script>
+
+  <!--Used INF 133 lecture slides and recording for Bootstrap for syntax help-->
+  <h3 id="aboutme">⭐ ABOUT ME ⭐</h3>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6"><img src="scholarshipspeaking.png" id="scholarshipspeaking"
+          alt="Alexia Ventura giving a scholarship speech" width=361 height=221></div>
+      <div class="col-md-6">
+        <p>I am an undergraduate computer science student at the University of California, Irvine, independent musician,
+          and content creator.
+          I am looking for full-time employment as a UI/UX designer, especially in the music or social media industries.
+          Check out the media below for examples of what I do!</p>
+      </div>
+    </div>
+  </div>
+
+  <!--Embedding media code directly copied from YouTube and Spotify's share features, modified slightly to account
+  for validation checks and changing the sizes-->
+  <div>
+    <iframe id="testimonialvideo" width="560" height="315"
+      src="https://www.youtube.com/embed/nqlMIpntUng?si=V0BgN-edzEXLAZVU&amp;start=41" title="YouTube video player"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+
+  <div>
+    <iframe style="border-radius:12px"
+      src="https://open.spotify.com/embed/playlist/4Hoy92VDQUWhptjgOObMjy?utm_source=generator&theme=0" width="500"
+      height="352" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy"></iframe>
+  </div>
+
+  <!--Used INF 133 lecture slides and recording for making a table for syntax help-->
+  <h3 id="experience">⭐ EXPERIENCE ⭐</h3>
+  <div class="table-container">
+    <table>
+      <tr>
+        <th>Company/Organization</th>
+        <th>Title(s)</th>
+        <th>Start/End Dates</th>
+      </tr>
+      <tr>
+        <td><a href="https://larc.uci.edu/">UC Irvine Learning and Academic Resource Center</a></td>
+        <td>Tutor, Mentor</td>
+        <td>September 2022 - Present</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.artistpg.com/">Artist Partner Group</a></td>
+        <td>Intern</td>
+        <td>January 2025 - April 2025</td>
+      </tr>
+      <tr>
+        <td><a href="https://kuci.org/wp/">KUCI 88.9 FM in Irvine</a></td>
+        <td>Staff Member, Music Show Host</td>
+        <td>June 2022 - Present</td>
+      </tr>
+    </table>
+  </div>
+
+  <h3 id="projects">⭐ PROJECTS ⭐</h3>
+  <p>✨ Researcher and UI/UX Designer - <a
+      href="https://www.figma.com/proto/jfWJdAXQZT19bVPnI0tl7A/Instagram-Redesign?node-id=2002-25&t=zzXpPBuRoeFdaddC-1&starting-point-node-id=2002%3A25">Human-Computer
+      Interaction Social Media Redesign Research</a></p>
+  <p>✨ Web Developer - <a href="https://cobalt-reliable-author-620.vscodeedu.app/">Graphics Portfolio</a></p>
+  <p>✨ Web Developer - <a href="https://www.alexiaventuramusic.com/">Music Website</a></p>
+  <p>✨ Web Developer - <a href="https://crimson-flying-mouse-282.vscodeedu.app/#data">Plant-Based Advocacy Website</a>
+  </p>
+  <p>✨ Content Creator - <a href="https://www.instagram.com/alexiaventuramusic/">@alexiaventurammusic</a> <a
+      href="https://www.instagram.com/kucimusicforwinners/">@kucimusicforwinners</a> <a
+      href="https://www.instagram.com/sloweateraj/">@sloweateraj</a></p>
+
+  <h3 id="skills">⭐ SKILLS ⭐</h3>
+  <h4>Design</h4>
+  <p>Canva 🦋 Figma</p>
+  <h4>Digital Art</h4>
+  <p>Paint 🦋 Sketchbook</p>
+  <h4>Languages</h4>
+  <p>CSS 🦋 HTML 🦋 Java 🦋 Javascript 🦋 Python </p>
+  <h4>Marketing</h4>
+  <p>Instagram 🦋 Microsoft Clipchamp 🦋 OBS Studio 🦋 YouTube </p>
+  <h4>Soft Skills</h4>
+  <p>Persuasive Writing 🦋 Presenting 🦋 Public Speaking 🦋 Researching </p>
+
+  <!--Syntax help for creating the footer: https://www.w3schools.com/TAgs/tag_footer.asp-->
+  <footer>
+    <a href="https://www.linkedin.com/in/alexia-ventura/">LinkedIn</a>
+    <p>©2025 Alexia Ventura</p>
+  </footer>
+
+</body>
+
+</html>
