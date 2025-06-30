@@ -1,11 +1,6 @@
 <!doctype html>
 <html lang="en">
 
-<!--
-WRITTEN BY: Alexia Ventura
-EMAIL: alexiabv@uci.edu
--->
-
 <head>
   <meta charset="utf-8">
   <meta name="author" content="Alexia Ventura">
@@ -15,8 +10,7 @@ EMAIL: alexiabv@uci.edu
   <link href="styles.css" rel="stylesheet" type="text/css">
   <title>Alexia Ventura</title>
 
-  <!--Syntax help for a favicon: https://www.w3schools.com/html/html_favicon.asp and
-  done based on my CodePath WEB101 class's example-->
+  <!--Inserting a favicon-->
   <link rel="icon" href="professionalheadshot.png">
 </head>
 
@@ -41,42 +35,94 @@ EMAIL: alexiabv@uci.edu
     <img src="spideralexia.png" id="spideralexia" alt="Alexia Ventura in a spider costume">
     <img src="pencilstars.png" id="pencilstars" alt="stars drawn with a pencil">
     <div class="header-container2">
-      <h2 id="introduction">I am a designer and researcher especially inspired by my passions for music and social media
-        inclusivity.</h2>
+      <h2 id="introduction">I am a UI/UX designer inspired by my passions for
+        music and social media inclusivity.</h2>
     </div>
   </section>
-  <script src="script.js"></script>
 
-  <!--Used INF 133 lecture slides and recording for Bootstrap for syntax help-->
   <h3 id="aboutme">⭐ ABOUT ME ⭐</h3>
+  <!--<div class="music-player">
+    <div class="icon animated-icon"></div>
+    <audio id="audio" src="musicsample.mp3"></audio>
+    <div class="controls">
+      <button onclick="togglePlay()">▶️/⏸️</button>
+      <button onclick="muteAudio()">🔇/🔊</button>
+    </div>
+  </div>-->
   <div class="container">
     <div class="row">
       <div class="col-md-6"><img src="scholarshipspeaking.png" id="scholarshipspeaking"
           alt="Alexia Ventura giving a scholarship speech" width=361 height=221></div>
       <div class="col-md-6">
-        <p>I am an undergraduate computer science student at the University of California, Irvine, independent musician,
-          and content creator.
-          I am looking for full-time employment as a UI/UX designer, especially in the music or social media industries.
+        <p>I recently graduated from the University of California, Irvine with a Bachelor's
+          degree in computer science. I am also an independent musician and content creator.
+          I am looking for full-time employment as a UI/UX designer or web developer, especially
+          in the music or entertainment industry.
           Check out the media below for examples of what I do!</p>
       </div>
     </div>
   </div>
 
+  <script>
+    const audio = document.getElementById('audio');
+
+    function togglePlay() {
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    }
+
+    function muteAudio() {
+      audio.muted = !audio.muted;
+    }
+  </script>
+
   <!--Embedding media code directly copied from YouTube and Spotify's share features, modified slightly to account
-  for validation checks and changing the sizes-->
+  for validation checks and changing the sizes
   <div>
     <iframe id="testimonialvideo" width="560" height="315"
       src="https://www.youtube.com/embed/nqlMIpntUng?si=V0BgN-edzEXLAZVU&amp;start=41" title="YouTube video player"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </div>
-
+  </div>-->
   <div>
-    <iframe style="border-radius:12px"
-      src="https://open.spotify.com/embed/playlist/4Hoy92VDQUWhptjgOObMjy?utm_source=generator&theme=0" width="500"
-      height="352" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-      loading="lazy"></iframe>
+    <div id="player"></div>
   </div>
+  <script>
+    // 1. Load the IFrame Player API code asynchronously.
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    var player;
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        height: '315',
+        width: '560',
+        videoId: 'nqlMIpntUng',
+        playerVars: { 'start': 41 },
+        events: {
+          'onStateChange': onPlayerStateChange
+        }
+      });
+    }
+
+    function onPlayerStateChange(event) {
+      if (event.data == YT.PlayerState.PLAYING) {
+        // Check every 500ms if we've reached the stop time
+        var stopTime = 73; // seconds
+        var interval = setInterval(function () {
+          if (player.getCurrentTime() >= stopTime) {
+            player.pauseVideo();
+            clearInterval(interval);
+          }
+        }, 500);
+      }
+    }
+  </script>
 
   <!--Used INF 133 lecture slides and recording for making a table for syntax help-->
   <h3 id="experience">⭐ EXPERIENCE ⭐</h3>
