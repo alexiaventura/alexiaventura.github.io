@@ -53,9 +53,17 @@ th {
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding-top: 20px;
-    /* adjust spacing as needed */
     text-align: center;
+}
+
+.introduction-wrapper {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    text-align: center;
+    width: 100%;
 }
 
 
@@ -114,6 +122,10 @@ div {
 
 footer {
     text-align: center;
+}
+
+.footertext {
+    color: white;
 }
 
 /*I followed along with the CodePath WEB101 example for this, cited as a PDF in my README file,
