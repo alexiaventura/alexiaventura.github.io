@@ -11,9 +11,12 @@ Padding: https://www.w3schools.com/csS/css_padding.asp
 For the table, I followed along directly with the CSS lecture recording to just use the same code, since it
 was my first time making it.*/
 
+html,
 body {
+    overscroll-behavior: none;
     background-color: black;
 }
+
 
 td,
 th {
@@ -58,7 +61,7 @@ th {
 
 .introduction-wrapper {
     position: absolute;
-    top: 80%;
+    top: 85%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 3;
@@ -122,6 +125,7 @@ div {
 
 footer {
     text-align: center;
+    padding-top: 10px;
 }
 
 .footertext {
