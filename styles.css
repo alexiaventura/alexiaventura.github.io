@@ -1,16 +1,3 @@
-/* Based on the accessibility checker at https://achecks.org/checker/index.php, I had to change the font 
-colors I picked manually through https://webaim.org/resources/contrastchecker/ to pass the validation checks.
-Therefore, some of the color values are in rgb, some are the actual name of the color, some are the hex number.
-
-I have some experience in HTML/CSS already, so I feel like some of these things are pretty basic and don't really
-need to be cited. I did check back on some syntax though and found the documentation to cite it.
-Flexbox: https://www.w3schools.com/csS/css3_flexbox_container.asp
-Margin: https://www.w3schools.com/Css/css_margin.asp
-Padding: https://www.w3schools.com/csS/css_padding.asp
-
-For the table, I followed along directly with the CSS lecture recording to just use the same code, since it
-was my first time making it.*/
-
 html,
 body {
     overscroll-behavior: none;
@@ -132,9 +119,6 @@ footer {
     color: white;
 }
 
-/*I followed along with the CodePath WEB101 example for this, cited as a PDF in my README file,
-since I wanted to add this as a unique feature for my own portfolio. It's outside of what is
-taught in INF 133 and is just for me*/
 section {
     align-items: center;
     display: flex;
@@ -178,7 +162,6 @@ section img {
     object-fit: cover;
 }
 
-/*Syntax help for iframes: https://www.w3schools.com/tags/tag_iframe.asp*/
 iframe {
     display: flex;
     justify-content: center;
@@ -187,12 +170,6 @@ iframe {
     padding: 0px;
 }
 
-/*  For the following, I learned in the CodePath WEB101 class how to make
-a navigation bar that's well-aligned on the screen and changes upon hovering
-over the text, but I also looked for the documentation as follows
-Syntax help: https://www.w3schools.com/Css/css_navbar.asp
-https://www.w3schools.com/Css/css_navbar_horizontal.asp
-*/
 ul {
     list-style-type: none;
     display: block;
