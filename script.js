@@ -20,7 +20,7 @@ const scrollAnimation = () => {
 
     background.style.top = scrollamount * scrollrates.background + 'px';
     pencilstars.style.top = scrollamount * scrollrates.pencilstars + 'px';
-    greeting.style.top = scrollamount * scrollrates.greeting + 'px';
+    // greeting.style.top = scrollamount * scrollrates.greeting + 'px';
     introduction.style.top = scrollamount * scrollrates.introduction + 'px';
 }
 

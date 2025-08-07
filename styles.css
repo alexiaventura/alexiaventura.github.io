@@ -28,16 +28,36 @@ th {
 }
 
 .header-container {
-    padding-bottom: 400px;
-    text-align: center;
     display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 10px;
+    padding-bottom: 500px;
+    width: 100%;
+    height: 100vh;
 }
 
-.header-container2 {
-    padding-top: 400px;
+.greeting-wrapper {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
     text-align: center;
-    display: flex;
+    width: 100%;
 }
+
+
+.header-container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 20px;
+    /* adjust spacing as needed */
+    text-align: center;
+}
+
 
 .container {
     text-align: center;
@@ -118,12 +138,15 @@ section img {
 
 #greeting {
     font-size: 70px;
-    z-index: 3;
+    white-space: nowrap;
+    margin: 0;
 }
 
 #introduction {
     font-size: 20px;
     z-index: 3;
+    white-space: nowrap;
+    margin: 0;
 }
 
 #background {
