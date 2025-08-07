@@ -1,11 +1,11 @@
-import AboutMe from '../components/AboutMe';
+import './About.css';
 
 function About() {
     return (
-        <main>
-            <h1>About Page</h1>
-            <AboutMe />
-        </main>
+        <section id="aboutme">
+            <h2>⭐ ABOUT ME ⭐</h2>
+            <p>I recently graduated from UC Irvine with a Bachelor's in Computer Science...</p>
+        </section>
     );
 }
 
