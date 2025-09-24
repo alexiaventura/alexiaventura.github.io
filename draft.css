@@ -1,0 +1,222 @@
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    background-color: black;
+    font-family: 'Arial', sans-serif;
+    overscroll-behavior: none;
+}
+
+/* Header Container */
+.header-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Background Image */
+#background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.3;
+}
+
+/* Slideshow Container */
+.slideshow-container {
+    position: relative;
+    max-width: 500px;
+    width: 60%;
+    margin: auto;
+    z-index: 1;
+    border: 10px solid black;
+    border-radius: 10px;
+}
+
+/* Slides */
+.mySlides {
+    display: none;
+    position: relative;
+}
+
+.mySlides img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+}
+
+/* Caption Text */
+.text {
+    color: #f2f2f2;
+    background-color: black;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number Text */
+.numbertext {
+    color: #f2f2f2;
+    background-color: black;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Navigation Buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+    border-radius: 3px;
+}
+
+.prev {
+    left: 0;
+    text-decoration: none;
+}
+
+.next {
+    right: 0;
+    text-decoration: none;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    /* Prevent items from wrapping */
+    gap: 30px;
+    /* Space between items */
+    padding: 10px 0;
+    background-color: black;
+    list-style-type: none;
+    margin: 0;
+    overflow-x: auto;
+    /* Optional: allow horizontal scroll if needed */
+}
+
+.navbar li {
+    flex-shrink: 0;
+    /* Prevent shrinking below content size */
+}
+
+.navbar a {
+    font-family: Arial;
+    color: #8D8DF6;
+    font-size: 16px;
+    text-decoration: none;
+    white-space: nowrap;
+    /* Prevent text from wrapping */
+}
+
+.navbar a:hover {
+    font-weight: bold;
+    color: #B69AF9;
+}
+
+.greeting-wrapper {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    text-align: center;
+    width: 100%;
+}
+
+#greeting {
+    font-size: 50px;
+    color: white;
+    white-space: nowrap;
+    margin: 0;
+}
+
+#introduction {
+    font-size: 20px;
+    color: white;
+    z-index: 3;
+    margin: 0;
+}
+
+.header-container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+
+.introduction-wrapper {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    text-align: center;
+    width: 100%;
+}
+
+#pencilstars {
+    position: absolute;
+    z-index: 1;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+#pencilbubbles {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    z-index: 1;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+#cursor {
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+    animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
+}
