@@ -1,30 +1,146 @@
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 html,
 body {
-    overscroll-behavior: none;
     background-color: black;
+    font-family: 'Arial', sans-serif;
+    overscroll-behavior: none;
 }
 
-
-td,
-th {
-    border-width: 1px;
-    border-style: solid;
-    color: rgb(141, 112, 221);
-}
-
-th {
-    font-size: 150%;
-    padding: 5px;
-}
-
+/* Header Container */
 .header-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Background Image */
+#background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.3;
+}
+
+/* Slideshow Container */
+.slideshow-container {
+    position: relative;
+    max-width: 500px;
+    width: 60%;
+    margin: auto;
+    z-index: 1;
+    border: 10px solid black;
+    border-radius: 10px;
+}
+
+/* Slides */
+.mySlides {
+    display: none;
+    position: relative;
+}
+
+.mySlides img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+}
+
+/* Caption Text */
+.text {
+    color: #f2f2f2;
+    background-color: black;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number Text */
+.numbertext {
+    color: #f2f2f2;
+    background-color: black;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Navigation Buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+    border-radius: 3px;
+}
+
+.prev {
+    left: 0;
+    text-decoration: none;
+}
+
+.next {
+    right: 0;
+    text-decoration: none;
+}
+
+.navbar ul {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    padding-top: 10px;
-    padding-bottom: 500px;
-    width: 100%;
-    height: 100vh;
+    align-items: center;
+    flex-wrap: nowrap;
+    /* Prevent items from wrapping */
+    gap: 30px;
+    /* Space between items */
+    padding: 10px 0;
+    background-color: black;
+    list-style-type: none;
+    margin: 0;
+    overflow-x: auto;
+    /* Optional: allow horizontal scroll if needed */
+}
+
+.navbar li {
+    flex-shrink: 0;
+    /* Prevent shrinking below content size */
+}
+
+.navbar a {
+    font-family: Arial;
+    color: #8D8DF6;
+    font-size: 16px;
+    text-decoration: none;
+    white-space: nowrap;
+    /* Prevent text from wrapping */
+}
+
+.navbar a:hover {
+    font-weight: bold;
+    color: #B69AF9;
 }
 
 .greeting-wrapper {
@@ -37,6 +153,20 @@ th {
     width: 100%;
 }
 
+#greeting {
+    font-size: 50px;
+    color: white;
+    white-space: nowrap;
+    margin: 0;
+}
+
+#introduction {
+    font-size: 20px;
+    color: white;
+    z-index: 3;
+    margin: 0;
+}
+
 .header-container2 {
     display: flex;
     justify-content: center;
@@ -47,7 +177,7 @@ th {
 
 .introduction-wrapper {
     position: absolute;
-    top: 85%;
+    top: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 3;
@@ -55,206 +185,55 @@ th {
     width: 100%;
 }
 
-.container {
-    text-align: center;
-    display: flex;
-    height: 100%;
-    width: 100%;
-}
-
-.experience-container {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-}
-
-.title-container {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    padding-top: 20px;
-}
-
-
-.table-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-h1 {
-    font-family: 'Arial';
-    color: white;
-    text-align: center;
-}
-
-h2 {
-    font-family: 'Arial';
-    color: rgb(241, 239, 244);
-    text-align: center;
-}
-
-h3 {
-    font-family: 'Arial';
-    color: #A785EA;
-    text-align: center;
-}
-
-h4 {
-    font-family: 'Arial';
-    color: rgb(241, 239, 244);
-    font-style: italic;
-    text-align: center;
-}
-
-p {
-    font-family: 'Arial';
-    color: rgb(141, 112, 221);
-    background-color: black;
-    text-align: center;
-}
-
-footer {
-    text-align: center;
-    padding-top: 10px;
-}
-
-.footertext {
-    color: white;
-}
-
-section {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-section img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-#greeting {
-    font-size: 70px;
-    white-space: nowrap;
-    margin: 0;
-}
-
-#introduction {
-    font-size: 20px;
-    z-index: 3;
-    white-space: nowrap;
-    margin: 0;
-}
-
-#background {
-    z-index: 0;
-}
-
-#spideralexia {
-    z-index: 1;
-}
-
 #pencilstars {
-    z-index: 2;
+    position: absolute;
+    z-index: 1;
     object-fit: cover;
+    opacity: 0.5;
 }
 
-iframe {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-    padding: 0px;
+#pencilbubbles {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    z-index: 1;
+    object-fit: cover;
+    opacity: 0.5;
 }
 
-ul {
-    list-style-type: none;
-    display: block;
-    margin: 0px;
-    padding: 0px;
-    z-index: 4;
-}
-
-/* Style rule set for individual li */
-li {
-    float: left;
-    margin: 10px;
-}
-
-
-/* Style rule set for individual li link */
-li a {
-    font-family: Arial;
-    color: #8D8DF6;
-    font-size: 16px;
-    text-decoration: none;
-}
-
-/* Style rule set for hovered link */
-li a:hover {
+#cursor {
+    display: inline-block;
+    color: white;
     font-weight: bold;
-    color: #B69AF9;
+    animation: blink 1s step-start infinite;
 }
 
-/* Style the buttons that are used to open and close the accordion panel */
-.accordion {
-    background-color: #000;
-    color: rgb(141, 112, 221);
-    cursor: pointer;
-    padding: 18px;
-    width: 60%;
-    text-align: left;
-    border: none;
-    outline: none;
-    transition: 0.4s;
+@keyframes blink {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
 }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active,
-.accordion:hover {
-    background-color: #000;
+.experience-wrapper {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    text-align: center;
+    width: 100%;
 }
 
-/* Style the accordion panel. Note: hidden by default */
-.panel {
-    padding: 0 18px;
-    background-color: #000;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-    box-sizing: border-box;
-    width: 60%;
-}
-
-.panel p {
+#experiencetitle {
+    font-size: 50px;
+    color: white;
+    white-space: nowrap;
     margin: 0;
-    text-align: left;
-    color: #fff;
-}
-
-.accordion:after {
-    content: '\02795';
-    font-size: 13px;
-    color: #777;
-    float: right;
-    margin-left: 5px;
-}
-
-.active:after {
-    content: "\2796";
 }
