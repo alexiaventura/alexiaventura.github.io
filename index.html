@@ -5,67 +5,95 @@
   <meta charset="utf-8">
   <meta name="author" content="Alexia Ventura">
   <meta name="description" content="Alexia Ventura's UI/UX design portfolio">
-  <!-- Linking Bootstrap and an external stylesheet-->
-  <link href="bootstrap.min.css" rel="stylesheet">
-  <link href="styles.css" rel="stylesheet" type="text/css">
   <title>Alexia Ventura</title>
 
-  <!--Syntax help for a favicon: https://www.w3schools.com/html/html_favicon.asp and
-  done based on my CodePath WEB101 class's example-->
+  <!-- Linking Bootstrap and external stylesheet -->
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <link href="draft.css" rel="stylesheet" type="text/css">
+
+  <!-- Favicon -->
   <link rel="icon" href="professionalheadshot.png">
 </head>
 
 <body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="draft.html">HOME</a></li>
+      <li><a href="draft2.html">EXPERIENCE</a></li>
+      <li><a href="projects.html">PROJECTS</a></li>
+    </ul>
+  </nav>
 
-  <!--Syntax help for a navigation bar: https://www.w3schools.com/Css/css_navbar.asp
-  and done based on my CodePath WEB101 class's example-->
-  <ul>
-    <li><a href="#aboutme">ABOUT ME</a></li>
-    <li><a href="experience.html">EXPERIENCE</a></li>
-    <li><a href="projects.html">PROJECTS</a></li>
-  </ul>
 
-  <!--Syntax help for using sections: https://www.w3schools.com/TAgs/tag_section.asp
-  The parallax animation code was done based on my CodePath WEB101 class's example-->
   <section>
     <div class="header-container">
+      <img src="websitebackground.png" id="background" alt="purple gradient background">
+      <img src="pencilstars.png" id="pencilstars" alt="stars drawn with a pencil">
+
       <div class="greeting-wrapper">
-        <h1 id="greeting">Hi, I am Alexia Ventura.</h1>
+        <h1 id="greeting"><span id="typed-text"></span><span id="cursor">|</span></h1>
+      </div>
+
+      <!-- Slideshow container -->
+      <div class="slideshow-container">
+
+        <!-- Slides -->
+        <div class="mySlides">
+          <div class="numbertext">1 / 6</div>
+          <img src="carouselphoto1.png" style="width:100%"
+            alt="Carousel Photo 1: Alexia Ventura speaking at a scholarship donor appreciation event (2024)">
+          <div class="text">Speaking at a scholarship donor appreciation event (2024)</div>
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">2 / 6</div>
+          <img src="carouselphoto2.png" style="width:100%"
+            alt="Carousel Photo 2: Alexia Ventura while filming a research program testimonial video (2023)">
+          <div class="text">Filming a research program testimonial video (2023)</div>
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">3 / 6</div>
+          <img src="carouselphoto3.png" style="width:100%"
+            alt="Carousel Photo 3: Alexia Ventura at an awards event for undeclared majors (2022)">
+          <div class="text">Awards event for undeclared majors (2022)</div>
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">4 / 6</div>
+          <img src="carouselphoto4.png" style="width:100%"
+            alt="Carousel Photo 4: Alexia Ventura at an awards event for semi-finalist recognition (2023)">
+          <div class="text">Awards event for semi-finalist recognition (2023)</div>
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">5 / 6</div>
+          <img src="carouselphoto5.png" style="width:100%"
+            alt="Carousel Photo 5: Alexia Ventura touring the Irvine Barclay Theatre with other scholarship recipients (2024)">
+          <div class="text">Touring the Irvine Barclay Theatre (2024)</div>
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">6 / 6</div>
+          <img src="carouselphoto6.png" style="width:100%"
+            alt="Carousel Photo 6: Alexia Ventura at the Breaking Into The Music Industry conference (2025)">
+          <div class="text">Breaking Into The Music Industry conference (2025)</div>
+        </div>
+
+        <!-- Navigation buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
       </div>
     </div>
-    <img src="websitebackground.png" id="background" alt="purple gradient background">
-    <img src="spideralexia.png" id="spideralexia" alt="Alexia Ventura in a spider costume">
-    <img src="pencilstars.png" id="pencilstars" alt="stars drawn with a pencil">
+
     <div class="header-container2">
       <div class="introduction-wrapper">
-        <h2 id="introduction">I create inspired by my passions for music and social
-          media inclusivity.</h2>
+        <h2 id="introduction"></h2>
       </div>
     </div>
   </section>
-  <script src="script.js"></script>
 
-  <!--Used INF 133 lecture slides and recording for Bootstrap for syntax help-->
-  <h3 id="aboutme">⭐ ABOUT ME ⭐</h3></br>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6"><img src="scholarshipspeaking.png" id="scholarshipspeaking"
-          alt="Alexia Ventura giving a scholarship speech" width=361 height=221></div>
-      <div class="col-md-6">
-        <p></br>I recently graduated from the University of California, Irvine with a Bachelor's degree in Computer
-          Science. I am looking for full-time employment as a UI/UX designer, web developer, technical writer, or data
-          analyst, especially in the music or social media industries. I have adaptable skills that can also apply to
-          other fields, such as education, finance, and business.</br></br> If you are interested in connecting,
-          please check out my <a href="https://www.linkedin.com/in/alexia-ventura/">LinkedIn</a>!
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <!--Syntax help for creating the footer: https://www.w3schools.com/TAgs/tag_footer.asp-->
-  <footer>
-    <p class="footertext">©2025 Alexia Ventura</p>
-  </footer>
+  <script src="draft.js"></script>
 
 </body>
 
