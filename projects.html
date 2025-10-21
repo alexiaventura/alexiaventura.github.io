@@ -5,64 +5,70 @@
     <meta charset="utf-8">
     <meta name="author" content="Alexia Ventura">
     <meta name="description" content="Alexia Ventura's UI/UX design portfolio">
-    <!-- Linking Bootstrap and an external stylesheet-->
-    <link href="bootstrap.min.css" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet" type="text/css">
     <title>Alexia Ventura</title>
 
-    <!--Syntax help for a favicon: https://www.w3schools.com/html/html_favicon.asp and
-  done based on my CodePath WEB101 class's example-->
+    <!-- Linking Bootstrap and external stylesheet -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="draft.css" rel="stylesheet" type="text/css">
+
+    <!-- Favicon -->
     <link rel="icon" href="professionalheadshot.png">
 </head>
 
 <body>
-    <ul>
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="experience.html">EXPERIENCE</a></li>
-        <li><a href="projects.html">PROJECTS</a></li>
-        <li><a href="skills.html">SKILLS</a></li>
-        <li><a href="honors.html">HONORS</a></li>
-    </ul>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+        </ul>
+    </nav>
 
     <section>
-        <div class="title-container">
-            <h3 id="experience">⭐ PROJECTS ⭐</h3></br>
-            <div class="experience-container">
-                <h4>Human-Computer Interaction Research Project</h4>
-                </br>
-                <p>Coming soon: I'm planning to update this soon with an organized </p>
-                <p>You can find my poster at the University of California, Irvine,
-                    </br> where it will be shown to potential ICS Honors students.</p>
+        <div class="header-container">
+            <img src="websitebackground.png" id="background" alt="purple gradient background">
+            <img src="pencilbubbles.png" id="pencilstars" alt="stars drawn with a pencil">
 
-                </br>
-                <h4>GitHub</h4>
-                </br>
-                <p>You are welcome to look at my <a href="https://github.com/alexiaventura">GitHub</a> right now,
-                    although I'm also still updating it.
-                    </br>I coded this website myself, which is on there.</p>
+            <div class="experience-header">
+                <h1 id="experiencetitle">EXPERIENCE</h1>
+            </div>
 
-                </br>
-                <h4>Music Website</h4>
-                </br>
-                <p>I am going to change my music website from a Google Sites one to an HTML one
-                    soon. </br>You can go see the <a href="https://www.alexiaventuramusic.com/">Google Sites website</a>
-                    if you want to see my experience anyway.
-                </p>
-                <p>I am also taking a social media break from my Instagram,
-                    </br>so I deactivated the account. If you want to
-                    see
-                    proof of my content
-                    </br> creation success though, I will reactivate the account for you.
-                </p>
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+
+                <!-- Slides -->
+                <div class="mySlides">
+                    <div class="numbertext">1 / 3</div>
+                    <a href="https://drive.google.com/file/d/1kVOiUtZVWa06OGjWC2JsYLZVWqVnHoK6/view?usp=sharing"
+                        target="_blank">
+                        <img src="projectphoto1.png" style="width:100%"
+                            alt="Carousel Photo 1: Alexia Ventura speaking at a scholarship donor appreciation event (2024)">
+                    </a>
+                    <div class="text">Human-Computer Interaction Music Social Media Thesis</div>
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="carouselphoto2.png" style="width:100%"
+                        alt="Carousel Photo 2: Alexia Ventura while filming a research program testimonial video (2023)">
+                    <div class="text">Filming a research program testimonial video (2023)</div>
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="carouselphoto3.png" style="width:100%"
+                        alt="Carousel Photo 3: Alexia Ventura at an awards event for undeclared majors (2022)">
+                    <div class="text">Awards event for undeclared majors (2022)</div>
+                </div>
+
+                <!-- Navigation buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
         </div>
 
     </section>
 
-    <!--Syntax help for creating the footer: https://www.w3schools.com/TAgs/tag_footer.asp-->
-    <footer>
-        <p class="footertext">©2025 Alexia Ventura</p>
-    </footer>
+    <script src="draft.js"></script>
 
 </body>
 
