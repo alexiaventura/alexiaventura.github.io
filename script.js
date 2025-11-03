@@ -16,6 +16,19 @@ const scrollAnimation = () => {
     if (background) background.style.top = scrollamount * scrollrates.background + 'px';
     if (pencilstars) pencilstars.style.top = scrollamount * scrollrates.pencilstars + 'px';
     if (introduction) introduction.style.top = scrollamount * scrollrates.introduction + 'px';
+
+    // Fade out pencil stars after section 1
+    const section1 = document.getElementById("home-section");
+    if (section1 && pencilstars) {
+        const sectionBottom = section1.offsetTop + section1.offsetHeight;
+        const scrollBottom = scrollamount + window.innerHeight;
+
+        if (scrollBottom > sectionBottom) {
+            pencilstars.style.opacity = "0";
+        } else {
+            pencilstars.style.opacity = "0.5"; // or your preferred default
+        }
+    }
 };
 
 window.addEventListener('scroll', scrollAnimation);

@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <!-- Title, author, and description of the website -->
   <meta charset="utf-8">
   <meta name="author" content="Alexia Ventura">
   <meta name="description" content="Alexia Ventura's UI/UX design portfolio">
@@ -10,12 +11,15 @@
   <!-- Linking Bootstrap and external stylesheet -->
   <link href="bootstrap.min.css" rel="stylesheet">
   <link href="styles.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- Favicon -->
   <link rel="icon" href="professionalheadshot.png">
 </head>
 
 <body>
+  <!-- Navigation bar -->
+  <!-- TODO: home, experience, projects tabs -->
   <nav class="navbar">
     <ul>
       <li><a href="https://drive.google.com/file/d/1kVOiUtZVWa06OGjWC2JsYLZVWqVnHoK6/view" target="_blank">THESIS</a>
@@ -24,17 +28,19 @@
     </ul>
   </nav>
 
+  <!-- Home page background (purple background with stars) -->
+  <img src="websitebackground.png" id="background" alt="purple gradient background">
 
-  <section>
+  <section id="home-section"> <!-- Start of Section 1: greeting, slideshow, and description -->
+    <img src="pencilstars.png" id="pencilstars" alt="stars drawn with a pencil">
     <div class="header-container">
-      <img src="websitebackground.png" id="background" alt="purple gradient background">
-      <img src="pencilstars.png" id="pencilstars" alt="stars drawn with a pencil">
 
+      <!-- Text for introducing myself (with a typing animation) -->
       <div class="greeting-wrapper">
         <h1 id="greeting"><span id="typed-text"></span><span id="cursor">|</span></h1>
       </div>
 
-      <!-- Slideshow container -->
+      <!-- Slideshow of photos -->
       <div class="slideshow-container">
 
         <!-- Slides -->
@@ -87,20 +93,56 @@
           <div class="text">Presenting at a research symposium (2024)</div>
         </div>
 
-        <!-- Navigation buttons -->
+        <!-- Slideshow navigation buttons -->
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
       </div>
     </div>
 
+    <!-- Text for describing myself (with a typing animation) -->
     <div class="header-container2">
       <div class="introduction-wrapper">
         <h2 id="introduction"></h2>
       </div>
     </div>
+  </section> <!-- End of Section 1: greeting, slideshow, and description -->
+
+  <section id="about-section">
+    <div class="about-container">
+      <div class="photo-wrapper">
+        <div class="photo-frame"></div>
+        <img src="professionalheadshot.png" alt="photo of Alexia Ventura" class="about-photo">
+      </div>
+      <div class="about-text">
+        <h1>ABOUT ME</h1>
+        <p>
+          I recently graduated from UC Irvine with a Bachelor's degree in Computer Science. I
+          am experienced with UI/UX design, data analysis, and content creation.
+          <br><br>
+          You can visit the Experience section for examples of my past professional work, or the Projects section for
+          how I have applied my skills in my own time.
+        </p>
+      </div>
+    </div>
+  </section>
 
   </section>
 
+  <footer id="site-footer">
+    <div class="footer-content">
+      <span class="footer-left">&copy; 2025 Alexia Ventura</span>
+      <span class="footer-right">
+        <a href="https://www.linkedin.com/in/alexia-ventura/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/alexiaventura" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="mailto:alexiaventura212@gmail.com"><i class="fas fa-envelope"></i></a>
+      </span>
+    </div>
+  </footer>
+
+
+
+
+  <!-- Javascript for animations -->
   <script src="script.js"></script>
 
 </body>
