@@ -2,73 +2,167 @@
 <html lang="en">
 
 <head>
+    <!-- Title, author, and description of the website -->
     <meta charset="utf-8">
     <meta name="author" content="Alexia Ventura">
     <meta name="description" content="Alexia Ventura's UI/UX design portfolio">
     <title>Alexia Ventura</title>
 
     <!-- Linking Bootstrap and external stylesheet -->
-    <link href="bootstrap.min.css" rel="stylesheet">
-    <link href="draft.css" rel="stylesheet" type="text/css">
+    <link href="/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <!-- Favicon -->
-    <link rel="icon" href="professionalheadshot.png">
+    <link rel="icon" href="/images/professionalheadshot.png">
 </head>
 
 <body>
+    <!-- Navigation bar -->
     <nav class="navbar">
         <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="/">HOME</a></li>
+            <li><a href="/experience/">EXPERIENCE</a></li>
+            <li><a href="/projects/">PROJECTS</a></li>
         </ul>
     </nav>
 
-    <section>
-        <div class="header-container">
-            <img src="websitebackground.png" id="background" alt="purple gradient background">
-            <img src="pencilbubbles.png" id="pencilbubbles" alt="bubbles drawn with a pencil">
+    <!-- Home page background (blue background with bubbles) -->
+    <!--TODO: change bubbles to different shape-->
+    <img src="/images/websitebackground.png" id="background" alt="purple gradient background">
+    <img src="/images/pencilbubbles.png" id="pencilbubbles" alt="bubbles drawn with a pencil">
 
-            <div class="experience-header">
-                <h1 id="experiencetitle">EXPERIENCE</h1>
+    <div class="experience-wrapper">
+        <h1 id="experiencetitle">PROJECTS</h1>
+        <p class="italic-text">Examples of what I’ve done as a student or for personal growth</p>
+    </div>
+
+    <section id="experience-section">
+        <div class="experience-container">
+            <div class="image-button-wrapper">
+                <div class="photo-wrapper">
+                    <div class="blue-photo-frame"></div>
+                    <img src="/images/thesisphoto.png" alt="Constelnote logo" class="about-photo">
+                    <div class="image-labels">
+                        <div class="image-title">
+                            <span>Music Social Media <br> HCI Research</span>
+                        </div>
+                        <div class="image-description">
+                            <span>Designer, Researcher</span>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <a href="/images/poster.png" target="_blank">
+                            <button class="overlay-button">Poster</button>
+                        </a>
+                        <a href="https://www.figma.com/design/itgR4JhPSJKvuM5WUwHIhf/Constelnote?node-id=0-1&t=IstgHdcy8ZTPfNqU-1"
+                            target="_blank">
+                            <button class="overlay-button">App Designs</button>
+                        </a>
+                        <a href="/documents/thesis.pdf" target="_blank">
+                            <button class="overlay-button">Thesis</button>
+                        </a>
+                    </div>
+                </div>
             </div>
 
-            <!-- Slideshow container -->
-            <div class="slideshow-container">
-
-                <!-- Slides -->
-                <div class="mySlides">
-                    <div class="numbertext">1 / 3</div>
-                    <a href="https://drive.google.com/file/d/1kVOiUtZVWa06OGjWC2JsYLZVWqVnHoK6/view?usp=sharing"
-                        target="_blank">
-                        <img src="projectphoto1.png" style="width:100%"
-                            alt="Carousel Photo 1: Alexia Ventura speaking at a scholarship donor appreciation event (2024)">
-                    </a>
-                    <div class="text">Human-Computer Interaction Music Social Media Thesis</div>
+            <div class="image-button-wrapper">
+                <div class="photo-wrapper">
+                    <div class="blue-photo-frame"></div>
+                    <img src="/images/portfoliophoto.png" alt="photo of Alexia Ventura speaking" class="about-photo">
+                    <div class="image-labels">
+                        <div class="image-title">
+                            <span>Portfolios</span>
+                        </div>
+                        <div class="image-description">
+                            <span>Web Designer and Developer</span>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <a href="https://www.figma.com/design/tWuET2UJijZUq3NxvEj5Za/Portfolio-Websites?node-id=2023-917&t=Ww1hq5zVd9R6k4bm-0"
+                            target="_blank">
+                            <button class="overlay-button">Figma Designs</button>
+                        </a>
+                        <a href="https://www.alexiaventuramusic.com" target="_blank">
+                            <button class="overlay-button">Music Website</button>
+                        </a>
+                    </div>
                 </div>
-
-                <div class="mySlides">
-                    <div class="numbertext">2 / 3</div>
-                    <img src="carouselphoto2.png" style="width:100%"
-                        alt="Carousel Photo 2: Alexia Ventura while filming a research program testimonial video (2023)">
-                    <div class="text">Filming a research program testimonial video (2023)</div>
-                </div>
-
-                <div class="mySlides">
-                    <div class="numbertext">3 / 3</div>
-                    <img src="carouselphoto3.png" style="width:100%"
-                        alt="Carousel Photo 3: Alexia Ventura at an awards event for undeclared majors (2022)">
-                    <div class="text">Awards event for undeclared majors (2022)</div>
-                </div>
-
-                <!-- Navigation buttons -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
         </div>
 
+        <div class="about-container">
+
+            <div class="image-button-wrapper">
+                <div class="photo-wrapper">
+                    <div class="blue-photo-frame"></div>
+                    <img src="/images/socialmediaimage.png" alt="photo of Alexia Ventura at the KUCI station"
+                        class="about-photo">
+                    <div class="image-labels">
+                        <div class="image-title">
+                            <span>Social Media Content</span>
+                        </div>
+                        <div class="image-description">
+                            <span>Content Creator, Live Streamer</span>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <a href="https://www.instagram.com/alexiaventuramusic" target="_blank">
+                            <button class="overlay-button">Music Account</button>
+                        </a>
+                        <a href="https://www.youtube.com/@SloweaterAJ" target="_blank">
+                            <button class="overlay-button">Gaming Channel</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-button-wrapper">
+                <div class="photo-wrapper">
+                    <div class="blue-photo-frame"></div>
+                    <img src="/images/artisticphoto.png" alt="photo of Alexia Ventura at the KUCI station"
+                        class="about-photo">
+                    <div class="image-labels">
+                        <div class="image-title">
+                            <span>Artistic Projects</span>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <a href="https://www.youtube.com/@alexiaventuramusic" target="_blank">
+                            <button class="overlay-button">Music</button>
+                        </a>
+                        <!--TODO: pop-up window slideshow? Use Canva for consistent image size?-->
+                        <a href="" target="_blank">
+                            <button class="overlay-button">Photos</button>
+                        </a>
+                        <a href="" target="_blank">
+                            <button class="overlay-button">Fan Art</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <script src="draft.js"></script>
+    </section>
+
+    <footer id="site-footer">
+        <div class="footer-content">
+            <span class="footer-left">&copy; 2025 Alexia Ventura</span>
+            <span class="footer-right">
+                <a href="https://www.linkedin.com/in/alexia-ventura/" target="_blank"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/alexiaventura" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:alexiaventura212@gmail.com"><i class="fas fa-envelope"></i></a>
+            </span>
+        </div>
+    </footer>
+
+
+
+
+    <!-- Javascript for animations -->
+    <script src="/script.js"></script>
 
 </body>
 
