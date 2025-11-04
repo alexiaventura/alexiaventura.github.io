@@ -215,12 +215,16 @@ body {
 
 
 #pencilbubbles {
-    position: absolute;
-    width: 200px;
-    height: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: contain;
     z-index: 1;
-    object-fit: cover;
     opacity: 0.5;
+    pointer-events: none;
+    transition: opacity 0.1s ease;
 }
 
 #cursor {
@@ -245,9 +249,7 @@ body {
 
 .experience-wrapper {
     position: absolute;
-    top: 15%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin-top: 60px;
     z-index: 3;
     text-align: center;
     width: 100%;
@@ -261,8 +263,12 @@ body {
 }
 
 p {
-    margin-top: 30px;
+    margin-top: 10px;
     color: white;
+}
+
+.italic-text {
+    font-style: italic;
 }
 
 #about-section {
@@ -296,6 +302,18 @@ p {
     width: 100%;
     height: 100%;
     background-color: #200435;
+    border-radius: 10px;
+    z-index: 0;
+}
+
+
+.blue-photo-frame {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 100%;
+    height: 100%;
+    background-color: #050337;
     border-radius: 10px;
     z-index: 0;
 }
@@ -398,4 +416,99 @@ p {
     font-size: 20px;
     transition: color 0.3s ease;
     text-decoration: none;
+}
+
+h1 {
+    color: white;
+}
+
+.image-button-wrapper {
+    position: relative;
+    display: inline-block;
+    z-index: 2;
+}
+
+.image-button-wrapper img {
+    display: block;
+    width: 350px;
+    height: auto;
+}
+
+.overlay-button {
+    background-color: #050337;
+    color: white;
+    border: none;
+    width: 100px;
+    height: 50px;
+    padding: 5px 5px;
+    font-size: 12px;
+    border-radius: 5px;
+    text-align: center;
+    white-space: normal;
+    word-break: break-word;
+    cursor: pointer;
+    z-index: 2;
+    transition: background-color 0.3s ease;
+}
+
+.overlay-button:hover {
+    background-color: #629BF1;
+}
+
+.buttons {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    z-index: 3;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#experience-section {
+    margin-top: 120px;
+    padding: 60px 20px;
+    background-color: black;
+    color: white;
+}
+
+.experience-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.image-labels {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 2;
+    width: max-content;
+    max-width: 280px;
+}
+
+.image-title {
+    color: white;
+    padding: 6px 12px;
+    font-size: 18px;
+    border-radius: 4px;
+    line-height: 1.4;
+}
+
+.image-description {
+    color: white;
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 8px;
 }
