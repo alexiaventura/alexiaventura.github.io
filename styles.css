@@ -213,8 +213,20 @@ body {
     transition: opacity 0.1s ease;
 }
 
-
 #pencilbubbles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: contain;
+    z-index: 1;
+    opacity: 0.5;
+    pointer-events: none;
+    transition: opacity 0.1s ease;
+}
+
+#pencilsparkles {
     position: fixed;
     top: 0;
     left: 0;
@@ -318,6 +330,17 @@ p {
     z-index: 0;
 }
 
+.gray-photo-frame {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 100%;
+    height: 100%;
+    background-color: #c0c0c0;
+    border-radius: 10px;
+    z-index: 0;
+}
+
 .about-photo {
     position: relative;
     z-index: 1;
@@ -326,7 +349,6 @@ p {
     border-radius: 10px;
     object-fit: cover;
 }
-
 
 .about-text {
     flex: 1;
@@ -511,4 +533,31 @@ h1 {
     font-size: 14px;
     font-style: italic;
     margin-top: 8px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    margin: 10% auto;
+    padding: 20px;
+    background: white;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.close {
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
 }
