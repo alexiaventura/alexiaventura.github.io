@@ -17,9 +17,9 @@
     <link rel="icon" href="/images/professionalheadshot.png">
 </head>
 
-<body>
+<body class="projects-page">
     <!-- Navigation bar -->
-    <nav class="navbar">
+    <nav class="navbar navbar-projects">
         <ul>
             <li><a href="/">HOME</a></li>
             <li><a href="/experience/">EXPERIENCE</a></li>
@@ -28,20 +28,25 @@
     </nav>
 
     <!-- Projects page background (silver background with bubbles) -->
-    <img src="/images/silverbackground.png" id="background" alt="purple gradient background">
+    <img src="/images/silverbackground.png" id="background" alt="silver gradient background">
     <img src="/images/pencilsparkles.png" id="pencilsparkles" alt="sparkles drawn with a pencil">
 
-    <div class="experience-wrapper">
-        <h1 id="experiencetitle">PROJECTS</h1>
-        <p class="italic-text">Examples of what I’ve done as a student or for personal growth</p>
+    <!-- Used to position title and description of project page -->
+    <div class="page-container">
+        <h1 id="pagetitle">PROJECTS</h1>
+        <p class="italic-text">Examples of what I have done as a student or for personal growth</p>
     </div>
 
+    <!-- Content shown on the project page -->
     <section id="experience-section">
+
+        <!-- Examples 1 and 2 -->
         <div class="experience-container">
-            <div class="image-button-wrapper">
-                <div class="photo-wrapper">
+            <!-- Example 1 -->
+            <div class="image-button-container">
+                <div class="image-container">
                     <div class="gray-photo-frame"></div>
-                    <img src="/images/thesisphoto.png" alt="Constelnote logo" class="about-photo">
+                    <img src="/images/thesisphoto.png" alt="Constelnote logo" class="photo">
                     <div class="image-labels">
                         <div class="image-title">
                             <span>Music Social Media <br> HCI Research</span>
@@ -50,25 +55,26 @@
                             <span>Designer, Researcher</span>
                         </div>
                     </div>
-                    <div class="buttons">
+                    <div class="button-container">
                         <a href="/images/poster.png" target="_blank">
-                            <button class="overlay-button">Poster</button>
+                            <button class="example-button">Poster</button>
                         </a>
                         <a href="https://www.figma.com/design/itgR4JhPSJKvuM5WUwHIhf/Constelnote?node-id=0-1&t=IstgHdcy8ZTPfNqU-1"
                             target="_blank">
-                            <button class="overlay-button">App Designs</button>
+                            <button class="example-button">App Designs</button>
                         </a>
                         <a href="/documents/thesis.pdf" target="_blank">
-                            <button class="overlay-button">Thesis</button>
+                            <button class="example-button">Thesis</button>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <div class="image-button-wrapper">
-                <div class="photo-wrapper">
+            <!-- Example 2 -->
+            <div class="image-button-container">
+                <div class="image-container">
                     <div class="gray-photo-frame"></div>
-                    <img src="/images/portfoliophoto.png" alt="photo of Alexia Ventura speaking" class="about-photo">
+                    <img src="/images/portfoliophoto.png" alt="photo of Alexia Ventura speaking" class="photo">
                     <div class="image-labels">
                         <div class="image-title">
                             <span>Portfolios</span>
@@ -77,26 +83,26 @@
                             <span>Web Designer and Developer</span>
                         </div>
                     </div>
-                    <div class="buttons">
+                    <div class="button-container">
                         <a href="https://www.figma.com/design/tWuET2UJijZUq3NxvEj5Za/Portfolio-Websites?node-id=2023-917&t=Ww1hq5zVd9R6k4bm-0"
                             target="_blank">
-                            <button class="overlay-button">Figma Designs</button>
+                            <button class="example-button">Figma Designs</button>
                         </a>
                         <a href="https://www.alexiaventuramusic.com" target="_blank">
-                            <button class="overlay-button">Music Website</button>
+                            <button class="example-button">Music Website</button>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="about-container">
-
-            <div class="image-button-wrapper">
-                <div class="photo-wrapper">
+        <!-- Examples 3 and 4 -->
+        <div class="experience-container">
+            <!-- Example 3 -->
+            <div class="image-button-container">
+                <div class="image-container">
                     <div class="gray-photo-frame"></div>
-                    <img src="/images/socialmediaimage.png" alt="photo of Alexia Ventura at the KUCI station"
-                        class="about-photo">
+                    <img src="/images/socialmediaimage.png" alt="Sloweater AJ profile photo" class="photo">
                     <div class="image-labels">
                         <div class="image-title">
                             <span>Social Media Content</span>
@@ -105,38 +111,38 @@
                             <span>Content Creator, Live Streamer</span>
                         </div>
                     </div>
-                    <div class="buttons">
+                    <div class="button-container">
                         <a href="https://www.instagram.com/alexiaventuramusic" target="_blank">
-                            <button class="overlay-button">Music Account</button>
+                            <button class="example-button">Music Account</button>
                         </a>
                         <a href="https://www.youtube.com/@SloweaterAJ" target="_blank">
-                            <button class="overlay-button">Gaming Channel</button>
+                            <button class="example-button">Gaming Channel</button>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <div class="image-button-wrapper">
-                <div class="photo-wrapper">
+            <!-- Example 4 -->
+            <div class="image-button-container">
+                <div class="image-container">
                     <div class="gray-photo-frame"></div>
-                    <img src="/images/artisticphoto.png" alt="photo of Alexia Ventura at the KUCI station"
-                        class="about-photo">
+                    <img src="/images/artisticphoto.png" alt="artistic photo of Alexia Ventura" class="photo">
                     <div class="image-labels">
                         <div class="image-title">
                             <span>Artistic Projects</span>
                         </div>
                     </div>
-                    <div class="buttons">
+                    <div class="button-container">
                         <a href="https://www.youtube.com/@alexiaventuramusic" target="_blank">
-                            <button class="overlay-button">Music</button>
+                            <button class="example-button">Music</button>
                         </a>
                         <a href="https://drive.google.com/drive/folders/1ZooESZK8Zz2ABepP4Fhh8ZS8GRO_9EJn?usp=sharing"
                             target="_blank">
-                            <button class="overlay-button">Photos</button>
+                            <button class="example-button">Photos</button>
                         </a>
                         <a href="https://drive.google.com/drive/folders/1MID41ZlxsCNoaaPty3rHbCVALL2EeJ82?usp=sharing"
                             target="_blank">
-                            <button class="overlay-button">Fan Art</button>
+                            <button class="example-button">Fan Art</button>
                         </a>
                     </div>
                 </div>
@@ -144,10 +150,9 @@
         </div>
     </section>
 
-    </section>
-
-    <footer id="site-footer">
-        <div class="footer-content">
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-container">
             <span class="footer-left">&copy; 2025 Alexia Ventura</span>
             <span class="footer-right">
                 <a href="https://www.linkedin.com/in/alexia-ventura/" target="_blank"><i

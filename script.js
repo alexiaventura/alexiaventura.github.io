@@ -17,7 +17,7 @@ const scrollAnimation = () => {
     if (pencilstars) pencilstars.style.top = scrollamount * scrollrates.pencilstars + 'px';
     if (introduction) introduction.style.top = scrollamount * scrollrates.introduction + 'px';
 
-    // Fade out pencil stars after section 1
+    // Fades out pencil stars after section 1 (to avoid having stars show up with the about me section)
     const section1 = document.getElementById("home-section");
     if (section1 && pencilstars) {
         const sectionBottom = section1.offsetTop + section1.offsetHeight;
@@ -26,28 +26,14 @@ const scrollAnimation = () => {
         if (scrollBottom > sectionBottom) {
             pencilstars.style.opacity = "0";
         } else {
-            pencilstars.style.opacity = "0.5"; // or your preferred default
+            pencilstars.style.opacity = "0.5";
         }
     }
 };
 
 window.addEventListener('scroll', scrollAnimation);
 
-// Accordion toggle
-var acc = document.getElementsByClassName("accordion");
-for (let i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
-        } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
-        }
-    });
-}
-
-// Slideshow logic
+// Slideshow animation
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -60,7 +46,7 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-    let slides = document.getElementsByClassName("mySlides");
+    let slides = document.getElementsByClassName("slides");
 
     if (slides.length === 0) return;
 
@@ -74,6 +60,7 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
 }
 
+// Typing animation
 document.addEventListener("DOMContentLoaded", function () {
     const text = "Hi, I am Alexia Ventura.";
     const typedText = document.getElementById("typed-text");
@@ -86,9 +73,9 @@ document.addEventListener("DOMContentLoaded", function () {
             index++;
             setTimeout(type, 50); // Typing speed
         } else {
-            // ✨ Stop blinking after typing is done
-            cursor.style.animation = "none"; // Stops the blink
-            cursor.style.opacity = "1";      // Keeps it visible (optional)
+            // Stops the cursor from blinking after typing is done
+            cursor.style.animation = "none";
+            cursor.style.opacity = "1";
             cursor.style.display = "none";
         }
     }
@@ -105,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (index < text.length) {
             target.textContent += text.charAt(index);
             index++;
-            setTimeout(type, 50); // Adjust speed here (milliseconds per character)
+            setTimeout(type, 50); // Typing speed
         }
     }
 

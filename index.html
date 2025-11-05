@@ -17,9 +17,9 @@
   <link rel="icon" href="/images/professionalheadshot.png">
 </head>
 
-<body>
+<body class="home-page">
   <!-- Navigation bar -->
-  <nav class="navbar">
+  <nav class="navbar navbar-home">
     <ul>
       <li><a href="/">HOME</a></li>
       <li><a href="/experience/">EXPERIENCE</a></li>
@@ -28,14 +28,16 @@
   </nav>
 
   <!-- Home page background (purple background with stars) -->
+  <!-- Pencil stars code is in the home section for styling-->
   <img src="/images/purplebackground.png" id="background" alt="purple gradient background">
 
   <section id="home-section"> <!-- Start of Section 1: greeting, slideshow, and description -->
     <img src="/images/pencilstars.png" id="pencilstars" alt="stars drawn with a pencil">
-    <div class="header-container">
 
+    <!-- Container used at top of home page (not including the description) -->
+    <div class="home-top-container">
       <!-- Text for introducing myself (with a typing animation) -->
-      <div class="greeting-wrapper">
+      <div class="greeting-container">
         <h1 id="greeting"><span id="typed-text"></span><span id="cursor">|</span></h1>
       </div>
 
@@ -43,53 +45,53 @@
       <div class="slideshow-container">
 
         <!-- Slides -->
-        <div class="mySlides">
-          <div class="numbertext">1 / 7</div>
+        <div class="slides">
+          <div class="slidenumber">1 / 7</div>
           <img src="/images/carouselphoto1.png" style="width:100%"
             alt="Carousel Photo 1: Alexia Ventura speaking at a scholarship donor appreciation event (2024)">
-          <div class="text">Speaking at a scholarship donor appreciation event (2024)</div>
+          <div class="caption">Speaking at a scholarship donor appreciation event (2024)</div>
         </div>
 
-        <div class="mySlides">
-          <div class="numbertext">2 / 7</div>
+        <div class="slides">
+          <div class="slidenumber">2 / 7</div>
           <img src="/images/carouselphoto2.png" style="width:100%"
             alt="Carousel Photo 2: Alexia Ventura while filming a research program testimonial video (2023)">
-          <div class="text">Filming a research program testimonial video (2023)</div>
+          <div class="caption">Filming a research program testimonial video (2023)</div>
         </div>
 
-        <div class="mySlides">
-          <div class="numbertext">3 / 7</div>
+        <div class="slides">
+          <div class="slidenumber">3 / 7</div>
           <img src="/images/carouselphoto3.png" style="width:100%"
             alt="Carousel Photo 3: Alexia Ventura at an awards event for undeclared majors (2022)">
-          <div class="text">Awards event for undeclared majors (2022)</div>
+          <div class="caption">Awards event for undeclared majors (2022)</div>
         </div>
 
-        <div class="mySlides">
-          <div class="numbertext">4 / 7</div>
+        <div class="slides">
+          <div class="slidenumber">4 / 7</div>
           <img src="/images/carouselphoto4.png" style="width:100%"
             alt="Carousel Photo 4: Alexia Ventura at an awards event for semi-finalist recognition (2023)">
-          <div class="text">Awards event for semi-finalist recognition (2023)</div>
+          <div class="caption">Awards event for semi-finalist recognition (2023)</div>
         </div>
 
-        <div class="mySlides">
-          <div class="numbertext">5 / 7</div>
+        <div class="slides">
+          <div class="slidenumber">5 / 7</div>
           <img src="/images/carouselphoto5.png" style="width:100%"
             alt="Carousel Photo 5: Alexia Ventura touring the Irvine Barclay Theatre with other scholarship recipients (2024)">
-          <div class="text">Touring the Irvine Barclay Theatre (2024)</div>
+          <div class="caption">Touring the Irvine Barclay Theatre (2024)</div>
         </div>
 
-        <div class="mySlides">
-          <div class="numbertext">6 / 7</div>
+        <div class="slides">
+          <div class="slidenumber">6 / 7</div>
           <img src="/images/carouselphoto6.png" style="width:100%"
             alt="Carousel Photo 6: Alexia Ventura at the Breaking Into The Music Industry conference (2025)">
-          <div class="text">Breaking Into The Music Industry conference (2025)</div>
+          <div class="caption">Breaking Into The Music Industry conference (2025)</div>
         </div>
 
-        <div class="mySlides">
-          <div class="numbertext">7 / 7</div>
+        <div class="slides">
+          <div class="slidenumber">7 / 7</div>
           <img src="/images/carouselphoto7.png" style="width:100%"
             alt="Carousel Photo 7: Alexia Ventura presenting at a research symposium (2024)">
-          <div class="text">Presenting at a research symposium (2024)</div>
+          <div class="caption">Presenting at a research symposium (2024)</div>
         </div>
 
         <!-- Slideshow navigation buttons -->
@@ -99,18 +101,17 @@
     </div>
 
     <!-- Text for describing myself (with a typing animation) -->
-    <div class="header-container2">
-      <div class="introduction-wrapper">
-        <h2 id="introduction"></h2>
-      </div>
+    <div class="description-container">
+      <h2 id="introduction"></h2>
     </div>
+
   </section> <!-- End of Section 1: greeting, slideshow, and description -->
 
-  <section id="about-section">
+  <section id="about-section"> <!-- Start of Section 2: about me-->
     <div class="about-container">
-      <div class="photo-wrapper">
-        <div class="photo-frame"></div>
-        <img src="/images/professionalheadshot.png" alt="photo of Alexia Ventura" class="about-photo">
+      <div class="image-container">
+        <div class="purple-photo-frame"></div>
+        <img src="/images/professionalheadshot.png" alt="professional headshot of Alexia Ventura" class="photo">
       </div>
       <div class="about-text">
         <h1>ABOUT ME</h1>
@@ -123,12 +124,11 @@
         </p>
       </div>
     </div>
-  </section>
+  </section> <!-- End of Section 2: about me-->
 
-  </section>
-
-  <footer id="site-footer">
-    <div class="footer-content">
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="footer-container">
       <span class="footer-left">&copy; 2025 Alexia Ventura</span>
       <span class="footer-right">
         <a href="https://www.linkedin.com/in/alexia-ventura/" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -137,9 +137,6 @@
       </span>
     </div>
   </footer>
-
-
-
 
   <!-- Javascript for animations -->
   <script src="/script.js"></script>
