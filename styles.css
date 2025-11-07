@@ -138,25 +138,37 @@ p {
 #experience-section {
     margin-top: 120px;
     padding: 60px 20px;
+    padding-top: 100px;
 }
 
 /* Used to help position the content shown on the experience and project pages */
 .experience-container {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 40px;
+    grid-auto-rows: minmax(400px, auto);
     max-width: 1000px;
     margin: 0 auto;
-    flex-wrap: wrap;
+    padding-bottom: 40px;
+}
+
+/* Adjusting the experience and project pages for smaller windows */
+@media (max-width: 600px) {
+    .experience-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 0 20px;
+    }
 }
 
 /* Used for aligning the image, frame, and buttons 
 correctly on the experience and project page */
 .image-button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     position: relative;
-    display: inline-block;
     z-index: 2;
 }
 

@@ -11,6 +11,5 @@ I wanted my website to have a creative and ambitious aesthetic, so I included a 
 This portfolio highlights my experience in communicating information effectively with a non-technical audience, as well as connecting with people in real time or on the algorithm through online platforms. I expect that roles like technical writing, UX researching, and A&R scouting would be where my experience would be most beneficial.
 
 TODO:
-- Fix link for https, http, neither added on to www
 - Fix spacing of the content in the experience and projects pages (content on first row is too close to content on second row)
 - Add rules that adjust content based on window size
