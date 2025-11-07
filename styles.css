@@ -262,12 +262,14 @@ link to examples of experience or projects) */
     z-index: 1;
     border: 10px solid black;
     border-radius: 10px;
+    overflow: hidden;
 }
 
 /* Slideshow slides */
 .slides {
     display: none;
     position: relative;
+    overflow: hidden;
 }
 
 .slides img {
@@ -449,7 +451,7 @@ link to examples of experience or projects) */
 
 /* The color the footer icon becomes from hovering in the home page */
 .home-page .footer-right a:hover {
-    color: #8D8DF6;
+    color: #B69AF9;
 }
 
 /* Javascript code for typing animation */
@@ -471,6 +473,63 @@ link to examples of experience or projects) */
     100% {
         opacity: 0;
     }
+}
+
+/* Adjusting the home page for smaller windows */
+@media (max-width: 768px) {
+    .home-top-container {
+        padding: 20px;
+        min-height: auto;
+    }
+
+    .greeting-container {
+        position: static;
+        transform: none;
+        margin-bottom: 20px;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .description-container {
+        position: static;
+        transform: none;
+        margin-top: 20px;
+        padding: 0 20px;
+        text-align: center;
+        margin-bottom: 50px;
+        min-height: 60px;
+    }
+
+    #greeting {
+        font-size: 32px;
+        white-space: normal;
+    }
+
+    #introduction {
+        font-size: 18px;
+    }
+
+    .slideshow-container {
+        width: 100%;
+        max-width: 40vw;
+    }
+
+    .slides img {
+        width: 100%;
+        height: 150px;
+    }
+
+    #background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70vh;
+        object-fit: cover;
+        z-index: 0;
+        opacity: 0.5;
+    }
+
 }
 
 /* ------- Experience Page Only ------- */
