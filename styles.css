@@ -23,8 +23,9 @@ body {
     width: 100%;
     height: 100vh;
     object-fit: cover;
-    z-index: 0;
+    z-index: -2;
     opacity: 0.5;
+    pointer-events: none;
 }
 
 /* Navigation bar */
@@ -110,9 +111,9 @@ p {
     color: white;
 }
 
-/* ------- Experience and Projects Pages Only ------- */
+/* ------- Case Study Pages Only ------- */
 
-/* Used to position title and description of experience and project pages */
+/* Used to position title and description of case study page */
 .page-container {
     position: absolute;
     margin-top: 60px;
@@ -121,7 +122,7 @@ p {
     width: 100%;
 }
 
-/* Title of experience and project page */
+/* Title of case study page */
 #pagetitle {
     font-size: 50px;
     color: white;
@@ -129,19 +130,19 @@ p {
     margin: 0;
 }
 
-/* Rules for description text on the experience and project pages */
+/* Rules for description text on the case study page */
 .italic-text {
     font-style: italic;
 }
 
-/* Used to prevent the content from being too high on the experience and project pages */
+/* Used to prevent the content from being too high on the case study page */
 #experience-section {
-    margin-top: 120px;
+    margin-top: 200px;
     padding: 60px 20px;
     padding-top: 100px;
 }
 
-/* Used to help position the content shown on the experience and project pages */
+/* Used to help position the content shown on the case study page */
 .experience-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -152,17 +153,21 @@ p {
     padding-bottom: 40px;
 }
 
-/* Adjusting the experience and project pages for smaller windows */
+/* Adjusting the case study page for smaller windows */
 @media (max-width: 600px) {
     .experience-container {
         grid-template-columns: 1fr;
         gap: 30px;
         padding: 0 20px;
     }
+
+    #experience-section {
+        margin-top: 230px;
+    }
 }
 
 /* Used for aligning the image, frame, and buttons 
-correctly on the experience and project page */
+correctly on the case study page */
 .image-button-container {
     display: flex;
     flex-direction: column;
@@ -179,7 +184,7 @@ correctly on the experience and project page */
 }
 
 /* Container, title text, and description text
-of content shown on experience and project pages*/
+of content shown on case study page */
 .image-labels {
     position: absolute;
     top: 20px;
@@ -207,7 +212,7 @@ of content shown on experience and project pages*/
 }
 
 /* Container used for positioning the buttons 
-on the experience and project pages */
+on the case study page */
 .button-container {
     position: absolute;
     bottom: 0%;
@@ -223,7 +228,7 @@ on the experience and project pages */
 }
 
 /* Example button general rules (buttons that 
-link to examples of experience or projects) */
+link to more information) */
 .example-button {
     color: white;
     border: none;
@@ -240,6 +245,17 @@ link to examples of experience or projects) */
     transition: background-color 0.3s ease;
 }
 
+/* Container to align external link buttons in one row */
+.external-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    z-index: 3;
+}
+
 /* ------- Home Page Only ------- */
 
 /* Container used at top of home page */
@@ -251,80 +267,6 @@ link to examples of experience or projects) */
     justify-content: center;
     min-height: 100vh;
     overflow: visible;
-}
-
-/* Slideshow container */
-.slideshow-container {
-    position: relative;
-    max-width: 500px;
-    width: 60%;
-    margin: auto;
-    z-index: 1;
-    border: 10px solid black;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-/* Slideshow slides */
-.slides {
-    display: none;
-    position: relative;
-    overflow: hidden;
-}
-
-.slides img {
-    width: 200px;
-    height: 300px;
-    object-fit: cover;
-    display: block;
-    margin: auto;
-}
-
-/* Slideshow caption text */
-.caption {
-    color: #f2f2f2;
-    background-color: black;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-}
-
-/* Slideshow slide number */
-.slidenumber {
-    color: #f2f2f2;
-    background-color: black;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
-
-/* Slideshow navigation buttons */
-.prev,
-.next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    user-select: none;
-    border-radius: 3px;
-    text-decoration: none;
-}
-
-.prev {
-    left: 0;
-}
-
-.next {
-    right: 0;
 }
 
 /* Home navigation bar */
@@ -349,7 +291,8 @@ link to examples of experience or projects) */
     width: 100%;
     height: 100vh;
     object-fit: contain;
-    z-index: 1;
+    /*z-index: 1;*/
+    z-index: 0;
     opacity: 0.5;
     pointer-events: none;
     transition: opacity 0.1s ease;
@@ -374,26 +317,35 @@ link to examples of experience or projects) */
     margin: 0;
 }
 
-/* Container used for positioning the description animation */
-.description-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    text-align: center;
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 3;
-}
-
 /* Introduction string, initialized for the animation */
 #introduction {
     font-size: 20px;
     color: white;
     z-index: 3;
     margin: 0;
+}
+
+/* Scroll hint arrow (with glow animation) */
+.scroll-hint {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.scroll-hint.visible {
+    opacity: 1;
+    animation: glow 3s ease-in-out infinite;
+}
+
+@keyframes glow {
+
+    0%,
+    100% {
+        text-shadow: 0 0 0px white;
+    }
+
+    50% {
+        text-shadow: 0 0 8px white;
+    }
 }
 
 /* Container used for positioning the about me information */
@@ -408,32 +360,12 @@ link to examples of experience or projects) */
     flex-wrap: wrap;
 }
 
-/* Container used for positioning the photo, frame, and buttons */
-.image-container {
-    position: relative;
-    width: fit-content;
-    height: fit-content;
-    z-index: 2;
-}
-
-/* Purple photo frame */
-.purple-photo-frame {
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    width: 100%;
-    height: 100%;
-    background-color: #200435;
-    border-radius: 10px;
-    z-index: 0;
-}
-
 /* About me text shared rules */
 .about-text {
-    flex: 1;
-    min-width: 250px;
+    width: 350px;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 100px;
+    z-index: 2;
 }
 
 /* About me text header rules */
@@ -447,6 +379,80 @@ link to examples of experience or projects) */
 .about-text p {
     font-size: 18px;
     line-height: 1.6;
+}
+
+/* Container used for positioning the photo, frame, and buttons */
+.image-container {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    z-index: 2;
+}
+
+/* Container used for positioning the case study preview information */
+.case-study-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+/* Case study section shared rules */
+#case-study {
+    padding-bottom: 60px;
+}
+
+/* Case study about text rules */
+#case-study .about-text {
+    margin-top: 0px;
+    width: 320px;
+    text-align: left;
+}
+
+/* Case study image rules */
+.case-study-container .image-container img {
+    width: 320px;
+    height: auto;
+}
+
+/* Case study title rules */
+#case-study h1 {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+/* Reverse case study logic for displaying further information */
+.case-study-container.reverse {
+    flex-direction: row-reverse;
+}
+
+/* The color the example button is without hovering in the home page */
+.home-page .example-button {
+    background-color: #3305be;
+}
+
+/* The color the example button becomes from hovering in the home page */
+.home-page .example-button:hover {
+    background-color: #8D8DF6;
+}
+
+
+/* Purple photo frame */
+.purple-photo-frame {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 100%;
+    height: 100%;
+    background-color: #200435;
+    border-radius: 10px;
+    z-index: 0;
 }
 
 /* The color the footer icon becomes from hovering in the home page */
@@ -490,33 +496,19 @@ link to examples of experience or projects) */
         text-align: center;
     }
 
-    .description-container {
-        position: static;
-        transform: none;
-        margin-top: 20px;
-        padding: 0 20px;
-        text-align: center;
-        margin-bottom: 50px;
-        min-height: 60px;
-    }
-
     #greeting {
         font-size: 32px;
         white-space: normal;
+        line-height: 1.2;
+        min-height: 2.4em;
     }
 
     #introduction {
         font-size: 18px;
-    }
-
-    .slideshow-container {
-        width: 100%;
-        max-width: 40vw;
-    }
-
-    .slides img {
-        width: 100%;
-        height: 150px;
+        line-height: 1.4;
+        max-width: 320px;
+        margin: 12px auto 0;
+        min-height: 6.5em;
     }
 
     #background {
@@ -526,16 +518,27 @@ link to examples of experience or projects) */
         width: 100%;
         height: 70vh;
         object-fit: cover;
-        z-index: 0;
+        z-index: -2;
+        /* z-index: 0 */
         opacity: 0.5;
     }
 
+    .about-text {
+        margin-top: 5px;
+        margin-bottom: 40px;
+    }
+
+    #case-study {
+        padding-bottom: 10px;
+    }
+
+
 }
 
-/* ------- Experience Page Only ------- */
+/* ------- Case Study 1 Page Only ------- */
 
-/* Experience navigation bar */
-.navbar-experience a {
+/* Case study 1 page navigation bar */
+.navbar-casestudy1 a {
     font-family: Arial;
     color: #629BF1;
     font-size: 16px;
@@ -543,7 +546,7 @@ link to examples of experience or projects) */
     white-space: nowrap;
 }
 
-.navbar-experience a:hover {
+.navbar-casestudy1 a:hover {
     font-weight: bold;
     color: #B6CFF4;
 }
@@ -556,10 +559,12 @@ link to examples of experience or projects) */
     width: 100%;
     height: 100vh;
     object-fit: contain;
-    z-index: 1;
+    /*z-index: 0;*/
+    z-index: 0;
     opacity: 0.5;
     pointer-events: none;
     transition: opacity 0.1s ease;
+    pointer-events: none;
 }
 
 /* Blue photo frame */
@@ -574,25 +579,25 @@ link to examples of experience or projects) */
     z-index: 0;
 }
 
-/* The color the example button is without hovering in the experience page */
-.experience-page .example-button {
+/* The color the example button is without hovering in the case study 1 page */
+.casestudy1-page .example-button {
     background-color: #050337;
 }
 
-/* The color the example button becomes from hovering in the experience page */
-.experience-page .example-button:hover {
+/* The color the example button becomes from hovering in the case study 1 page */
+.casestudy1-page .example-button:hover {
     background-color: #629BF1;
 }
 
-/* The color the footer icon becomes from hovering in the experience page */
-.experience-page .footer-right a:hover {
+/* The color the footer icon becomes from hovering in the case study 1 page */
+.casestudy1-page .footer-right a:hover {
     color: #629BF1;
 }
 
-/* ------- Projects Page Only ------- */
+/* ------- Case Study 2 Page Only ------- */
 
-/* Projects navigation bar */
-.navbar-projects a {
+/* Case study 2 page navigation bar */
+.navbar-casestudy2 a {
     font-family: Arial;
     color: #FFFFFF;
     font-size: 16px;
@@ -600,7 +605,7 @@ link to examples of experience or projects) */
     white-space: nowrap;
 }
 
-.navbar-projects a:hover {
+.navbar-casestudy2 a:hover {
     font-weight: bold;
     color: #200435;
 }
@@ -613,10 +618,12 @@ link to examples of experience or projects) */
     width: 100%;
     height: 100vh;
     object-fit: contain;
-    z-index: 1;
+    /*z-index: 1;*/
+    z-index: 0;
     opacity: 0.5;
     pointer-events: none;
     transition: opacity 0.1s ease;
+    pointer-events: none;
 }
 
 /* Gray photo frame */
@@ -631,17 +638,17 @@ link to examples of experience or projects) */
     z-index: 0;
 }
 
-/* The color the footer icon becomes from hovering in the project page */
-.projects-page .footer-right a:hover {
+/* The color the footer icon becomes from hovering in the case study 2 page */
+.casestudy2-page .footer-right a:hover {
     color: #6F07BE;
 }
 
-/* The color the example button is without hovering in the project page */
-.projects-page .example-button {
+/* The color the example button is without hovering in the case study 2 page */
+.casestudy2-page .example-button {
     background-color: #3B3B3B;
 }
 
-/* The color the example button becomes from hovering in the project page */
-.projects-page .example-button:hover {
+/* The color the example button becomes from hovering in the case study 2 page */
+.casestudy2-page .example-button:hover {
     background-color: #6F07BE;
 }

@@ -15,54 +15,27 @@ const scrollAnimation = () => {
     let scrollamount = window.scrollY;
     if (background) background.style.top = scrollamount * scrollrates.background + 'px';
     if (pencilstars) pencilstars.style.top = scrollamount * scrollrates.pencilstars + 'px';
-    if (introduction) introduction.style.top = scrollamount * scrollrates.introduction + 'px';
 
-    // Fades out pencil stars after section 1 (to avoid having stars show up with the about me section)
+    // Fades out pencil stars after section 1 (to avoid having stars show up in future sections)
     const section1 = document.getElementById("home-section");
     if (section1 && pencilstars) {
         const sectionBottom = section1.offsetTop + section1.offsetHeight;
-        const scrollBottom = scrollamount + window.innerHeight;
-
-        if (scrollBottom > sectionBottom) {
+        const viewportBottom = scrollamount + window.innerHeight;
+        if (viewportBottom >= sectionBottom) {
             pencilstars.style.opacity = "0";
-        } else {
+        }
+        else {
             pencilstars.style.opacity = "0.5";
         }
+
     }
 };
 
 window.addEventListener('scroll', scrollAnimation);
 
-// Slideshow animation
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-    let slides = document.getElementsByClassName("slides");
-
-    if (slides.length === 0) return;
-
-    if (n > slides.length) { slideIndex = 1; }
-    if (n < 1) { slideIndex = slides.length; }
-
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-
-    slides[slideIndex - 1].style.display = "block";
-}
-
 // Typing animation
 document.addEventListener("DOMContentLoaded", function () {
-    const text = "Hi, I am Alexia Ventura.";
+    const text = "Hi, I am Alex Ventura.";
     const typedText = document.getElementById("typed-text");
     const cursor = document.getElementById("cursor");
     let index = 0;
@@ -71,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (index < text.length) {
             typedText.textContent += text.charAt(index);
             index++;
-            setTimeout(type, 50); // Typing speed
+            setTimeout(type, 40); // Typing speed
         } else {
             // Stops the cursor from blinking after typing is done
             cursor.style.animation = "none";
@@ -80,21 +53,24 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    setTimeout(type, 3000); // Initial delay before typing starts
+    setTimeout(type, 1000); // Initial delay before typing starts
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    const text = "I create content and help people with my knowledge and passion for technology, art, and inclusivity.";
-    const target = document.getElementById("introduction");
+    const text = "I specialize in designing for the music industry and writing internal documentation for non-technical users.";
+    const target = document.getElementById("about-me");
+    const scrollHint = document.getElementById("scroll-hint");
     let index = 0;
 
     function type() {
         if (index < text.length) {
             target.textContent += text.charAt(index);
             index++;
-            setTimeout(type, 50); // Typing speed
+            setTimeout(type, 40); // Typing speed
+        } else {
+            scrollHint.classList.add("visible"); // Shows the scroll hint
         }
     }
 
-    setTimeout(type, 7000);
+    setTimeout(type, 3000);
 });
