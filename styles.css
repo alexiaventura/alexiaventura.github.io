@@ -559,7 +559,6 @@ link to more information) */
     width: 100%;
     height: 100vh;
     object-fit: contain;
-    /*z-index: 0;*/
     z-index: 0;
     opacity: 0.5;
     pointer-events: none;
@@ -607,18 +606,17 @@ link to more information) */
 
 .navbar-casestudy2 a:hover {
     font-weight: bold;
-    color: #200435;
+    color: #6F07BE;
 }
 
-/* Pencil sparkles */
-#pencilsparkles {
+/* Pencil music notes */
+#pencilmusicnotes {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
     object-fit: contain;
-    /*z-index: 1;*/
     z-index: 0;
     opacity: 0.5;
     pointer-events: none;
@@ -651,4 +649,22 @@ link to more information) */
 /* The color the example button becomes from hovering in the case study 2 page */
 .casestudy2-page .example-button:hover {
     background-color: #6F07BE;
+}
+
+/* ------- Case Study 3 Page Only ------- */
+
+/* Pencil sparkles */
+#pencilsparkles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: contain;
+    /*z-index: 1;*/
+    z-index: 0;
+    opacity: 0.5;
+    pointer-events: none;
+    transition: opacity 0.1s ease;
+    pointer-events: none;
 }

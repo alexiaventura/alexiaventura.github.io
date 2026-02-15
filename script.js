@@ -1,11 +1,9 @@
 // Scroll-based parallax animation
-let background = document.getElementById("background");
 let greeting = document.getElementById("greeting");
 let introduction = document.getElementById("introduction");
 let pencilstars = document.getElementById("pencilstars");
 
 let scrollrates = {
-    background: 0.05,
     pencilstars: 0.15,
     greeting: 1,
     introduction: 1
@@ -13,7 +11,6 @@ let scrollrates = {
 
 const scrollAnimation = () => {
     let scrollamount = window.scrollY;
-    if (background) background.style.top = scrollamount * scrollrates.background + 'px';
     if (pencilstars) pencilstars.style.top = scrollamount * scrollrates.pencilstars + 'px';
 
     // Fades out pencil stars after section 1 (to avoid having stars show up in future sections)

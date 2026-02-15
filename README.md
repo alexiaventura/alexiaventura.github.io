@@ -4,12 +4,6 @@ UI/UX Design Portfolio
 Last updated on February 14th, 2026.
 Author: Alexia Ventura
 
-TODO:
-- recolor sparkles
-- delete background
-- add JS & CSS rules for music notes
-- prepare case study 3 page as much as possible
-
 This is my portfolio for UI/UX job applications. I used the skills I learned from web development courses and teaching myself to design my own website and launch it through GitHub Pages.
 
 I wanted my website to have a creative and ambitious aesthetic, so I included a lot of content that either I created or have been featured in. I even drew the background pencil sketches of the stars, bubbles, music notes, and sparkles. You can see my Figma designs here: https://www.figma.com/design/tWuET2UJijZUq3NxvEj5Za/Portfolio-Websites?node-id=2017-639&t=doAATvAkcYU3yCSn-0
