@@ -24,7 +24,6 @@ const scrollAnimation = () => {
         else {
             pencilstars.style.opacity = "0.5";
         }
-
     }
 };
 

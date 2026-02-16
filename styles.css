@@ -170,7 +170,8 @@ p {
 
 /* Title of case study page */
 #pagetitle {
-    font-size: 50px;
+    /* clamp is used instead of 50px to resize title when window shrinks */
+    font-size: clamp(28px, 4vw, 50px);
     color: white;
     white-space: nowrap;
     margin: 0;
@@ -209,6 +210,13 @@ p {
 
     #experience-section {
         margin-top: 230px;
+    }
+
+    #pagetitle {
+        font-size: 32px;
+        white-space: normal;
+        line-height: 1.2;
+        padding: 0 20px;
     }
 }
 
@@ -318,7 +326,7 @@ link to more information) */
 /* Home navigation bar */
 .navbar-home a {
     font-family: Arial;
-    color: #8D8DF6;
+    color: #FFFFFF;
     font-size: 16px;
     text-decoration: none;
     white-space: nowrap;
@@ -326,7 +334,7 @@ link to more information) */
 
 .navbar-home a:hover {
     font-weight: bold;
-    color: #B69AF9;
+    color: #8D8DF6;
 }
 
 /* Pencil stars */
@@ -503,7 +511,7 @@ link to more information) */
 
 /* The color the footer icon becomes from hovering in the home page */
 .home-page .footer-right a:hover {
-    color: #B69AF9;
+    color: #8D8DF6;
 }
 
 /* Javascript code for typing animation */
@@ -577,8 +585,6 @@ link to more information) */
     #case-study {
         padding-bottom: 10px;
     }
-
-
 }
 
 /* ------- Case Study 1 Page Only ------- */
@@ -586,7 +592,7 @@ link to more information) */
 /* Case study 1 page navigation bar */
 .navbar-casestudy1 a {
     font-family: Arial;
-    color: #629BF1;
+    color: #FFFFFF;
     font-size: 16px;
     text-decoration: none;
     white-space: nowrap;
@@ -594,7 +600,7 @@ link to more information) */
 
 .navbar-casestudy1 a:hover {
     font-weight: bold;
-    color: #B6CFF4;
+    color: #629BF1;
 }
 
 /* Pencil bubbles */
@@ -675,6 +681,20 @@ link to more information) */
 
 /* ------- Case Study 3 Page Only ------- */
 
+/* Case study 3 page navigation bar */
+.navbar-casestudy3 a {
+    font-family: Arial;
+    color: #FFFFFF;
+    font-size: 16px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.navbar-casestudy3 a:hover {
+    font-weight: bold;
+    color: #02760D;
+}
+
 /* Pencil sparkles */
 #pencilsparkles {
     position: fixed;
@@ -689,4 +709,19 @@ link to more information) */
     pointer-events: none;
     transition: opacity 0.1s ease;
     pointer-events: none;
+}
+
+/* The color the footer icon becomes from hovering in the case study 3 page */
+.casestudy3-page .footer-right a:hover {
+    color: #02760D;
+}
+
+/* The color the example button is without hovering in the case study 3 page */
+.casestudy3-page .example-button {
+    background-color: #013C07;
+}
+
+/* The color the example button becomes from hovering in the case study 3 page */
+.casestudy3-page .example-button:hover {
+    background-color: #02760D;
 }
