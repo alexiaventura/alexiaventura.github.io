@@ -71,3 +71,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setTimeout(type, 3000);
 });
+
+const lightbox = document.getElementById('lightbox');
+const lightboxImage = document.getElementById('lightbox-image');
+
+document.querySelectorAll('.zoomable').forEach(img => {
+    img.addEventListener('click', () => {
+        lightboxImage.src = img.src;
+        lightbox.style.display = 'flex';
+    });
+});
+
+lightbox.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+});
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+        lightbox.style.display = 'none';
+    }
+});
+
+document.getElementById('lightbox-close').addEventListener('click', () => {
+    lightbox.style.display = 'none';
+});
