@@ -91,12 +91,22 @@ document.addEventListener("DOMContentLoaded", function () {
 const lightbox = document.getElementById('lightbox');
 const lightboxImage = document.getElementById('lightbox-image');
 
+// Added for accessibility (zoomable images do not show GIFs)
 document.querySelectorAll('.zoomable').forEach(img => {
     img.addEventListener('click', () => {
-        lightboxImage.src = img.src;
+        const staticSrc = img.dataset.static;
+        const gifSrc = img.dataset.gif;
+
+        if (staticSrc && gifSrc) {
+            lightboxImage.src = reduceMotion ? staticSrc : gifSrc;
+        } else {
+            lightboxImage.src = img.src;
+        }
+
         lightbox.style.display = 'flex';
     });
 });
+
 
 lightbox.addEventListener('click', () => {
     lightbox.style.display = 'none';
