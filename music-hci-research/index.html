@@ -40,26 +40,24 @@
         <p class="italic-text">UC Irvine - UX Researcher (1 year and 10 months)</p>
 
         <div class="external-links">
-            <a href="https://www.alexiabelleventura.com/documents/thesis.pdf" target="_blank" rel="noopener">
-                <button class=" example-button">Thesis</button>
-            </a>
+            <a href="https://www.alexiabelleventura.com/documents/thesis.pdf" target="_blank" rel="noopener"
+                class="example-button">Thesis</a>
 
-            <a href="https://www.alexiabelleventura.com/documents/expoposter.pdf" target="_blank" rel="noopener">
-                <button class=" example-button">Expo Poster</button>
-            </a>
+            <a href="https://www.alexiabelleventura.com/documents/expoposter.pdf" target="_blank" rel="noopener"
+                class="example-button">Expo Poster</a>
 
             <a href="https://www.figma.com/design/itgR4JhPSJKvuM5WUwHIhf/Constelnote?node-id=0-1&p=f&t=Ixeos5CyEIfmklI2-0"
-                target="_blank" rel="noopener">
-                <button class=" example-button">Figma Designs</button>
-            </a>
+                target="_blank" rel="noopener" class="example-button">Figma Designs</a>
         </div>
     </div>
 
     <!-- Content shown on the case study 2 page -->
     <section id="experience-section">
+        <!-- Added to remove accessibility error -->
+        <h2 class="hidden-header">Case Study Content</h2>
 
         <!-- Row 1 -->
-        <section id="case-study">
+        <div class="case-study">
             <div class="case-study-container">
                 <div class="image-container">
                     <img src="/images/casestudy2image1.png" alt="screenshot of Alexia Ventura's Instagram profile"
@@ -75,10 +73,10 @@
                     </p>
                 </div>
             </div>
-        </section>
+        </div>
 
         <!-- Row 2 -->
-        <section id="case-study">
+        <div class="case-study">
             <div class="case-study-container reverse">
                 <div class="image-container">
                     <img src="/images/casestudy2image2.png" alt="screenshot of survey question result"
@@ -95,10 +93,10 @@
 
                 </div>
             </div>
-        </section>
+        </div>
 
         <!-- Row 3 -->
-        <section id="case-study">
+        <div class="case-study">
             <div class="case-study-container">
                 <div class="image-container">
                     <img src="/images/casestudy2image3.png" alt="Constelnote logo" class="photo zoomable">
@@ -112,10 +110,10 @@
                     </p>
                 </div>
             </div>
-        </section>
+        </div>
 
         <!-- Row 4 -->
-        <section id="case-study">
+        <div class="case-study">
             <div class="case-study-container reverse">
                 <div class="image-container">
                     <img src="/images/casestudy2image4.png" alt="Alexia Ventura's UX Research Poster"
@@ -131,7 +129,7 @@
 
                 </div>
             </div>
-        </section>
+        </div>
     </section>
 
     <!-- Footer -->
@@ -139,11 +137,12 @@
         <div class="footer-container">
             <span class="footer-left">&copy; 2026 Alexia Ventura</span>
             <span class="footer-right">
-                <a href="https://www.linkedin.com/in/alexia-ventura/" target="_blank" rel="noopener"><i
-                        class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/alexiaventura" target="_blank" rel="noopener"><i
+                <a href="https://www.linkedin.com/in/alexia-ventura/" target="_blank" rel="noopener"
+                    aria-label="LinkedIn profile"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/alexiaventura" target="_blank" rel="noopener" aria-label="GitHub profile"><i
                         class="fab fa-github"></i></a>
-                <a href="mailto:alexiaventura212@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="mailto:alexiaventura212@gmail.com" aria-label="Email Alexia Ventura"><i
+                        class="fas fa-envelope"></i></a>
             </span>
         </div>
     </footer>
@@ -151,7 +150,7 @@
     <!-- Lightbox for enlarging images -->
     <div id="lightbox" class="lightbox">
         <span id="lightbox-close">&times;</span>
-        <img id="lightbox-image" src="" alt="">
+        <img id="lightbox-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="">
     </div>
 
     <!-- Javascript for animations -->

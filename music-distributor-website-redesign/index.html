@@ -41,32 +41,28 @@
 
         <div class="external-links">
             <a href="https://www.figma.com/design/UcAgEFIJXQ5X3JQraEjdZY/release.global-and-Register-Landing-Page-Designs?node-id=0-1&p=f&t=WzDZ6mr6HxtUinA6-0"
-                target="_blank" rel="noopener">
-                <button class=" example-button">Figma Designs</button>
-            </a>
+                target="_blank" rel="noopener" class="example-button">Figma Designs</a>
 
-            <a href="https://www.alexiabelleventura.com/documents/websitemanual.pdf" target="_blank" rel="noopener">
-                <button class=" example-button">Website Manual</button>
-            </a>
+            <a href="https://www.alexiabelleventura.com/documents/websitemanual.pdf" target="_blank" rel="noopener"
+                class="example-button">Website Manual</a>
 
-            <a href="https://www.alexiabelleventura.com/documents/faqmanual.pdf" target="_blank" rel="noopener">
-                <button class=" example-button">FAQ Manual</button>
-            </a>
+            <a href="https://www.alexiabelleventura.com/documents/faqmanual.pdf" target="_blank" rel="noopener"
+                class="example-button">FAQ Manual</a>
 
-            <a href="https://release.global" target="_blank" rel="noopener">
-                <button class=" example-button">Release Global Website</button>
-            </a>
+            <a href="https://release.global" target="_blank" rel="noopener" class="example-button">Release Global
+                Website</a>
 
-            <a href="https://registerpub.com" target="_blank" rel="noopener">
-                <button class=" example-button">Register Website</button>
-            </a>
+            <a href="https://registerpub.com" target="_blank" rel="noopener" class="example-button">Register Website</a>
         </div>
     </div>
 
     <!-- Content shown on the case study 1 page -->
     <section id="experience-section">
+        <!-- Added to remove accessibility error -->
+        <h2 class="hidden-header">Case Study Content</h2>
+
         <!-- Row 1 -->
-        <section id="case-study">
+        <div class="case-study">
             <div class="case-study-container">
                 <div class="image-container">
                     <img src="/images/casestudy1image1.png" alt="original Release Global website design"
@@ -82,10 +78,10 @@
                     </p>
                 </div>
             </div>
-        </section>
+        </div>
 
         <!-- Row 2 -->
-        <section id="case-study">
+        <div class="case-study">
             <div class="case-study-container reverse">
                 <div class="image-container">
                     <img src="/images/casestudy1image2.png" alt="possible Release Global redesign"
@@ -101,10 +97,10 @@
                     </p>
                 </div>
             </div>
-        </section>
+        </div>
 
         <!-- Row 3 -->
-        <section id="case-study">
+        <div class="case-study">
             <div class="case-study-container">
                 <div class="image-container">
                     <!-- Code for an image that is not a GIF -->
@@ -128,10 +124,10 @@
                     </p>
                 </div>
             </div>
-        </section>
+        </div>
 
         <!-- Row 4 -->
-        <section id="case-study">
+        <div class="case-study">
             <div class="case-study-container reverse">
                 <div class="image-container">
                     <!-- Code for an image that is not a GIF -->
@@ -153,7 +149,7 @@
 
                 </div>
             </div>
-        </section>
+        </div>
     </section>
 
     <!-- Footer -->
@@ -161,11 +157,12 @@
         <div class="footer-container">
             <span class="footer-left">&copy; 2026 Alexia Ventura</span>
             <span class="footer-right">
-                <a href="https://www.linkedin.com/in/alexia-ventura/" target="_blank" rel="noopener"><i
-                        class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/alexiaventura" target="_blank" rel="noopener"><i
+                <a href="https://www.linkedin.com/in/alexia-ventura/" target="_blank" rel="noopener"
+                    aria-label="LinkedIn profile"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/alexiaventura" target="_blank" rel="noopener" aria-label="GitHub profile"><i
                         class="fab fa-github"></i></a>
-                <a href="mailto:alexiaventura212@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="mailto:alexiaventura212@gmail.com" aria-label="Email Alexia Ventura"><i
+                        class="fas fa-envelope"></i></a>
             </span>
         </div>
     </footer>
@@ -173,7 +170,7 @@
     <!-- Lightbox for enlarging images -->
     <div id="lightbox" class="lightbox">
         <span id="lightbox-close">&times;</span>
-        <img id="lightbox-image" src="" alt="">
+        <img id="lightbox-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="">
     </div>
 
     <!-- Javascript for animations -->

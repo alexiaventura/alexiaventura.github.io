@@ -23,6 +23,17 @@ body {
     }
 }
 
+.hidden-header {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    border: 0;
+}
+
 /* Background image */
 #background {
     position: absolute;
@@ -300,15 +311,15 @@ link to more information) */
     border: none;
     width: 100px;
     height: 50px;
-    padding: 5px 5px;
     font-size: 12px;
     border-radius: 5px;
-    text-align: center;
-    white-space: normal;
-    word-break: break-word;
     cursor: pointer;
     z-index: 2;
     transition: background-color 0.3s ease;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
 }
 
 /* Container to align external link buttons in one row */
@@ -468,12 +479,12 @@ link to more information) */
 }
 
 /* Case study section shared rules */
-#case-study {
+.case-study {
     padding-bottom: 60px;
 }
 
 /* Case study about text rules */
-#case-study .about-text {
+.case-study .about-text {
     margin-top: 0px;
     width: 320px;
     text-align: left;
@@ -486,7 +497,7 @@ link to more information) */
 }
 
 /* Case study title rules */
-#case-study h1 {
+.case-study h1 {
     font-size: 20px;
     font-weight: bold;
     text-decoration: underline;
@@ -594,7 +605,7 @@ link to more information) */
         margin-bottom: 40px;
     }
 
-    #case-study {
+    .case-study {
         padding-bottom: 10px;
     }
 }

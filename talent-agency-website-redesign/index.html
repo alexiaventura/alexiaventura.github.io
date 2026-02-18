@@ -41,21 +41,20 @@
 
         <div class="external-links">
             <a href="https://www.figma.com/design/H9PhHVOZQE8J0UmYld9MGR/Mezz-Entertainment-Website-Redesign?node-id=0-1&t=QVbRO171yjyUiBr8-1"
-                target="_blank" rel="noopener">
-                <button class=" example-button">Figma Designs</button>
-            </a>
+                target="_blank" rel="noopener" class="example-button">Figma Designs</a>
 
-            <a href="https://mezzentertainment.com" target="_blank" rel="noopener">
-                <button class=" example-button">Mezz Website</button>
-            </a>
+            <a href="https://mezzentertainment.com" target="_blank" rel="noopener" class="example-button">Mezz
+                Website</a>
         </div>
     </div>
 
     <!-- Content shown on the case study 3 page -->
     <section id="experience-section">
+        <!-- Added to remove accessibility error -->
+        <h2 class="hidden-header">Case Study Content</h2>
 
         <!-- Row 1 -->
-        <section id="case-study">
+        <div class="case-study">
             <div class="case-study-container">
                 <div class="image-container">
                     <img src="/images/casestudy2image1.png" alt="screenshot of Alexia Ventura's Instagram profile"
@@ -71,10 +70,10 @@
                     </p>
                 </div>
             </div>
-        </section>
+        </div>
 
         <!-- Row 2 -->
-        <section id="case-study">
+        <div class="case-study">
             <div class="case-study-container reverse">
                 <div class="image-container">
                     <img src="/images/casestudy2image2.png" alt="screenshot of survey question result"
@@ -91,10 +90,10 @@
 
                 </div>
             </div>
-        </section>
+        </div>
 
         <!-- Row 3 -->
-        <section id="case-study">
+        <div class="case-study">
             <div class="case-study-container">
                 <div class="image-container">
                     <img src="/images/casestudy2image3.png" alt="Constelnote logo" class="photo zoomable">
@@ -108,10 +107,10 @@
                     </p>
                 </div>
             </div>
-        </section>
+        </div>
 
         <!-- Row 4 -->
-        <section id="case-study">
+        <div class="case-study">
             <div class="case-study-container reverse">
                 <div class="image-container">
                     <img src="/images/casestudy2image4.png" alt="Alexia Ventura's UX Research Poster"
@@ -127,7 +126,7 @@
 
                 </div>
             </div>
-        </section>
+        </div>
     </section>
 
     <!-- Footer -->
@@ -135,11 +134,12 @@
         <div class="footer-container">
             <span class="footer-left">&copy; 2026 Alexia Ventura</span>
             <span class="footer-right">
-                <a href="https://www.linkedin.com/in/alexia-ventura/" target="_blank" rel="noopener"><i
-                        class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/alexiaventura" target="_blank" rel="noopener"><i
+                <a href="https://www.linkedin.com/in/alexia-ventura/" target="_blank" rel="noopener"
+                    aria-label="LinkedIn profile"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/alexiaventura" target="_blank" rel="noopener" aria-label="GitHub profile"><i
                         class="fab fa-github"></i></a>
-                <a href="mailto:alexiaventura212@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="mailto:alexiaventura212@gmail.com" aria-label="Email Alexia Ventura"><i
+                        class="fas fa-envelope"></i></a>
             </span>
         </div>
     </footer>
@@ -147,7 +147,7 @@
     <!-- Lightbox for enlarging images -->
     <div id="lightbox" class="lightbox">
         <span id="lightbox-close">&times;</span>
-        <img id="lightbox-image" src="" alt="">
+        <img id="lightbox-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="">
     </div>
 
     <!-- Javascript for animations -->
