@@ -557,7 +557,7 @@ on the case study page */
 }
 
 /* Adjusting the home page for smaller windows */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .home-top-container {
         padding: 20px;
         min-height: auto;
