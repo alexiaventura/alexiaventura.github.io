@@ -605,6 +605,10 @@ on the case study page */
     .case-study {
         padding-bottom: 10px;
     }
+
+    .scroll-hint {
+        display: none !important;
+    }
 }
 
 /* ------- Case Study 1 Page Only ------- */
