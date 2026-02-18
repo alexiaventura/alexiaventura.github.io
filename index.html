@@ -2,16 +2,20 @@
 <html lang="en">
 
 <head>
-  <!-- Title, author, and description of the website -->
+  <!-- Title, author, description, and canonical link of the website -->
   <meta charset="utf-8">
   <meta name="author" content="Alexia Ventura">
   <meta name="description" content="Alexia Ventura's UI/UX Design Portfolio">
   <title>Alex Ventura</title>
+  <link rel="canonical" href="https://alexiabelleventura.com/">
 
   <!-- Linking Bootstrap and external stylesheet -->
   <link href="/bootstrap.min.css" rel="stylesheet">
   <link href="/styles.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Added to help with responsive design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Favicon -->
   <link rel="icon" href="/images/professionalheadshot.png">
@@ -45,7 +49,8 @@
       <div class="about-container">
         <div class="image-container">
           <div class="purple-photo-frame"></div>
-          <img src="/images/professionalheadshot.png" alt="professional headshot of Alexia Ventura" class="photo">
+          <img src="/images/professionalheadshot.png" alt="professional headshot of Alexia Ventura" class="photo"
+            width="300" height="305">
         </div>
         <div class="about-text">
           <p id="introduction">
@@ -60,10 +65,11 @@
   <section id="case-study">
     <div class="case-study-container">
       <div class="image-container">
-        <img src="/images/casestudy1preview.png" alt="Release Global website redesign" class="photo zoomable">
+        <img src="/images/casestudy1preview.png" alt="Release Global website redesign" class="photo zoomable"
+          loading="lazy">
       </div>
       <div class="about-text">
-        <h1>Music Distributor Website Redesign</h1>
+        <h2>Music Distributor Website Redesign</h2>
         <p>
           Web Designer (6 months)
           <br><br>
@@ -80,10 +86,11 @@
   <section id="case-study">
     <div class="case-study-container">
       <div class="image-container">
-        <img src="/images/casestudy2preview.png" alt="Alexia Ventura's UX Research Poster" class="photo zoomable">
+        <img src="/images/casestudy2preview.png" alt="Alexia Ventura's UX Research Poster" class="photo zoomable"
+          loading="lazy">
       </div>
       <div class="about-text">
-        <h1>Music HCI Research</h1>
+        <h2>Music HCI Research</h2>
         <p>
           UX Researcher (1 year and 10 months)
           <br><br>
@@ -103,8 +110,9 @@
     <div class="footer-container">
       <span class="footer-left">&copy; 2026 Alexia Ventura</span>
       <span class="footer-right">
-        <a href="https://www.linkedin.com/in/alexia-ventura/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/alexiaventura" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/alexia-ventura/" target="_blank" rel="noopener"><i
+            class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/alexiaventura" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
         <a href="mailto:alexiaventura212@gmail.com"><i class="fas fa-envelope"></i></a>
       </span>
     </div>

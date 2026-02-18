@@ -1,3 +1,6 @@
+// Added for accessibility (enabling reduced motion)
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
 // Scroll-based parallax animation
 let greeting = document.getElementById("greeting");
 let introduction = document.getElementById("introduction");
@@ -27,7 +30,10 @@ const scrollAnimation = () => {
     }
 };
 
-window.addEventListener('scroll', scrollAnimation);
+// Added for accessibility (no pencil stars animation)
+if (!reduceMotion) {
+    window.addEventListener('scroll', scrollAnimation);
+}
 
 // Typing animation
 document.addEventListener("DOMContentLoaded", function () {
@@ -43,13 +49,17 @@ document.addEventListener("DOMContentLoaded", function () {
             setTimeout(type, 40); // Typing speed
         } else {
             // Stops the cursor from blinking after typing is done
-            cursor.style.animation = "none";
-            cursor.style.opacity = "1";
             cursor.style.display = "none";
         }
     }
 
-    setTimeout(type, 1000); // Initial delay before typing starts
+    // Added for accessibility (loads text without typing animation)
+    if (!reduceMotion) {
+        setTimeout(type, 1000); // Initial delay before typing starts
+    } else {
+        typedText.textContent = text;
+        cursor.style.display = "none";
+    }
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -68,7 +78,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    setTimeout(type, 3000);
+    // Added for accessibility (loads text without typing animation)
+    if (!reduceMotion) {
+        setTimeout(type, 3000);
+    } else {
+        target.textContent = text;
+        scrollHint.classList.add("visible");
+    }
 });
 
 const lightbox = document.getElementById('lightbox');

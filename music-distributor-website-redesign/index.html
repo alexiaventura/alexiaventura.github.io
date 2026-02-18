@@ -31,8 +31,7 @@
         </ul>
     </nav>
 
-    <!-- Case study 1 page background (blue background with bubbles) -->
-    <img src="/images/bluebackground.png" id="background" alt="blue gradient background">
+    <!-- Case study 1 page background (blue bubbles) -->
     <img src="/images/pencilbubbles.png" id="pencilbubbles" alt="bubbles drawn with a pencil">
 
     <!-- Used to position title, description, and external link buttons of case study 1 page -->
@@ -42,23 +41,23 @@
 
         <div class="external-links">
             <a href="https://www.figma.com/design/UcAgEFIJXQ5X3JQraEjdZY/release.global-and-Register-Landing-Page-Designs?node-id=0-1&p=f&t=WzDZ6mr6HxtUinA6-0"
-                target="_blank">
+                target="_blank" rel="noopener">
                 <button class=" example-button">Figma Designs</button>
             </a>
 
-            <a href="https://www.alexiabelleventura.com/documents/websitemanual.pdf" target="_blank">
+            <a href="https://www.alexiabelleventura.com/documents/websitemanual.pdf" target="_blank" rel="noopener">
                 <button class=" example-button">Website Manual</button>
             </a>
 
-            <a href="https://www.alexiabelleventura.com/documents/faqmanual.pdf" target="_blank">
+            <a href="https://www.alexiabelleventura.com/documents/faqmanual.pdf" target="_blank" rel="noopener">
                 <button class=" example-button">FAQ Manual</button>
             </a>
 
-            <a href="https://release.global" target="_blank">
+            <a href="https://release.global" target="_blank" rel="noopener">
                 <button class=" example-button">Release Global Website</button>
             </a>
 
-            <a href="https://registerpub.com" target="_blank">
+            <a href="https://registerpub.com" target="_blank" rel="noopener">
                 <button class=" example-button">Register Website</button>
             </a>
         </div>
@@ -111,8 +110,14 @@
                     <!-- Code for an image that is not a GIF -->
                     <!--<img src="/images/casestudy1image3.png" alt="Release Global website redesign"
                         class="photo zoomable">-->
-                    <img src="/images/releaseglobalwebsite.gif" alt="Release Global website redesign"
-                        class="photo zoomable">
+                    <!-- Added for accessibility (switch GIF to image for reduced motion) -->
+                    <picture>
+                        <source srcset="/images/casestudy1image3.png" media="(prefers-reduced-motion: reduce)">
+                        <img src="/images/releaseglobalwebsite.gif" alt="Release Global website design"
+                            class="photo zoomable">
+                    </picture>
+
+
                 </div>
                 <div class="about-text">
                     <p>
@@ -131,7 +136,12 @@
                 <div class="image-container">
                     <!-- Code for an image that is not a GIF -->
                     <!--<img src="/images/casestudy1image4.png" alt="Register website design" class="photo zoomable">-->
-                    <img src="/images/registerwebsite.gif" alt="Register website design" class="photo zoomable">
+                    <!-- Added for accessibility (switch GIF to image for reduced motion) -->
+                    <picture>
+                        <source srcset="/images/casestudy1image4.png" media="(prefers-reduced-motion: reduce)">
+                        <img src="/images/registerwebsite.gif" alt="Register website design" class="photo zoomable">
+                    </picture>
+
                 </div>
                 <div class="about-text">
                     <p>
@@ -151,9 +161,10 @@
         <div class="footer-container">
             <span class="footer-left">&copy; 2026 Alexia Ventura</span>
             <span class="footer-right">
-                <a href="https://www.linkedin.com/in/alexia-ventura/" target="_blank"><i
+                <a href="https://www.linkedin.com/in/alexia-ventura/" target="_blank" rel="noopener"><i
                         class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/alexiaventura" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://github.com/alexiaventura" target="_blank" rel="noopener"><i
+                        class="fab fa-github"></i></a>
                 <a href="mailto:alexiaventura212@gmail.com"><i class="fas fa-envelope"></i></a>
             </span>
         </div>

@@ -15,6 +15,14 @@ body {
     overscroll-behavior: none;
 }
 
+/* Helps with accessibility */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
 /* Background image */
 #background {
     position: absolute;
@@ -102,6 +110,10 @@ body {
 
 /* Header text general rules */
 h1 {
+    color: white;
+}
+
+h2 {
     color: white;
 }
 
