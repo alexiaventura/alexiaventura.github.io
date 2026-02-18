@@ -609,6 +609,12 @@ on the case study page */
     .scroll-hint {
         display: none;
     }
+
+    #lightbox-close {
+        font-size: 48px;
+        top: 30px;
+        right: 20px;
+    }
 }
 
 /* ------- Case Study 1 Page Only ------- */
