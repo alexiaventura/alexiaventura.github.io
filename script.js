@@ -87,6 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+// Zoomable option for images
 const lightbox = document.getElementById('lightbox');
 const lightboxImage = document.getElementById('lightbox-image');
 

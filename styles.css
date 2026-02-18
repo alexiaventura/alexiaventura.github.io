@@ -68,7 +68,7 @@ body {
     flex-shrink: 0;
 }
 
-/* Photos that are not in the slideshow */
+/* Images */
 .photo {
     position: relative;
     z-index: 1;
@@ -134,7 +134,7 @@ p {
     color: white;
 }
 
-/* Lightbox rules for enlarging images */
+/* Zoomable option for images rules */
 .lightbox {
     position: fixed;
     top: 0;
@@ -304,8 +304,7 @@ on the case study page */
     align-items: center;
 }
 
-/* Example button general rules (buttons that 
-link to more information) */
+/* Button general rules */
 .example-button {
     color: white;
     border: none;
@@ -368,7 +367,6 @@ link to more information) */
     width: 100%;
     height: 100vh;
     object-fit: contain;
-    /*z-index: 1;*/
     z-index: 0;
     opacity: 0.5;
     pointer-events: none;
@@ -478,7 +476,7 @@ link to more information) */
     flex-wrap: wrap;
 }
 
-/* Case study section shared rules */
+/* Case study section general rules */
 .case-study {
     padding-bottom: 60px;
 }
@@ -511,7 +509,7 @@ link to more information) */
 
 /* The color the example button is without hovering in the home page */
 .home-page .example-button {
-    background-color: #3305be;
+    background-color: #3305BE;
 }
 
 /* The color the example button becomes from hovering in the home page */
@@ -519,8 +517,7 @@ link to more information) */
     background-color: #8D8DF6;
 }
 
-
-/* Purple photo frame */
+/* Purple photo frame for the headshot */
 .purple-photo-frame {
     position: absolute;
     top: -10px;
@@ -596,7 +593,6 @@ link to more information) */
         height: 70vh;
         object-fit: cover;
         z-index: -2;
-        /* z-index: 0 */
         opacity: 0.5;
     }
 
@@ -726,7 +722,6 @@ link to more information) */
     width: 100%;
     height: 100vh;
     object-fit: contain;
-    /*z-index: 1;*/
     z-index: 0;
     opacity: 0.5;
     pointer-events: none;

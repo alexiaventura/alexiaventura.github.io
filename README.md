@@ -1,7 +1,7 @@
 # alexiaventura.github.io
 UI/UX Design Portfolio
 
-Last updated on February 17th, 2026.
+Last updated on February 18th, 2026.
 Author: Alexia Ventura
 
 This is my portfolio for UI/UX job applications. I used the skills I learned from web development courses and teaching myself to design my own website and launch it through GitHub Pages.
