@@ -58,7 +58,7 @@ body {
     align-items: center;
     flex-wrap: wrap;
     gap: 30px;
-    padding: 10px 0 10px 30px;
+    padding: 10px 20px;
     list-style-type: none;
     margin: 0;
     overflow-x: visible;
@@ -507,12 +507,12 @@ on the case study page */
     flex-direction: row-reverse;
 }
 
-/* The color the example button is without hovering in the home page */
+/* The color the button is without hovering in the home page */
 .home-page .example-button {
     background-color: #3305BE;
 }
 
-/* The color the example button becomes from hovering in the home page */
+/* The color the button becomes from hovering in the home page */
 .home-page .example-button:hover {
     background-color: #8D8DF6;
 }
@@ -604,6 +604,12 @@ on the case study page */
     .case-study {
         padding-bottom: 10px;
     }
+
+    #scroll-hint {
+        position: relative;
+        margin-top: 10px;
+        display: block;
+    }
 }
 
 /* ------- Case Study 1 Page Only ------- */
@@ -637,12 +643,12 @@ on the case study page */
     pointer-events: none;
 }
 
-/* The color the example button is without hovering in the case study 1 page */
+/* The color the button is without hovering in the case study 1 page */
 .casestudy1-page .example-button {
     background-color: #050337;
 }
 
-/* The color the example button becomes from hovering in the case study 1 page */
+/* The color the button becomes from hovering in the case study 1 page */
 .casestudy1-page .example-button:hover {
     background-color: #629BF1;
 }
@@ -688,12 +694,12 @@ on the case study page */
     color: #6F07BE;
 }
 
-/* The color the example button is without hovering in the case study 2 page */
+/* The color the button is without hovering in the case study 2 page */
 .casestudy2-page .example-button {
     background-color: #3B3B3B;
 }
 
-/* The color the example button becomes from hovering in the case study 2 page */
+/* The color the button becomes from hovering in the case study 2 page */
 .casestudy2-page .example-button:hover {
     background-color: #6F07BE;
 }
@@ -734,12 +740,12 @@ on the case study page */
     color: #02760D;
 }
 
-/* The color the example button is without hovering in the case study 3 page */
+/* The color the button is without hovering in the case study 3 page */
 .casestudy3-page .example-button {
     background-color: #013C07;
 }
 
-/* The color the example button becomes from hovering in the case study 3 page */
+/* The color the button becomes from hovering in the case study 3 page */
 .casestudy3-page .example-button:hover {
     background-color: #02760D;
 }
